@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 const GrowingTree = () => {
   return (
-    <View style={{ width: '100%', height: '100%' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>GrowingTree</Text>
     </View>
   );

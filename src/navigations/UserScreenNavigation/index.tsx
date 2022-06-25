@@ -19,7 +19,7 @@ const { Screen, Navigator } = createStackNavigator();
 const UserScreenNavigation = () => {
   return (
     <NavigationContainer>
-      <Navigator>
+      <Navigator initialRouteName={RoutePath.HABIT_LIST_HOME}>
         <Screen name={RoutePath.SOCIAL} component={Social} />
         <Screen name={RoutePath.MY_PAGE} component={MyPage} />
         <Screen name={RoutePath.HABIT_PLUS} component={HabitPlus} />

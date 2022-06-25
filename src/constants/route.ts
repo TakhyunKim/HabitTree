@@ -7,3 +7,7 @@ export const ROUTE_PATH = {
   SOCIAL: 'social',
   USER_STATISTICS: 'userStatistics',
 };
+
+export const NAVIGATION_NAME = {
+  BOTTOM_TAB_NAVIGATION: 'bottomTabNavigation',
+};

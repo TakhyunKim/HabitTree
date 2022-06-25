@@ -12,21 +12,21 @@ import {
   UserStatistics,
 } from '../../screens';
 
-import { RoutePath } from '../../constants/route';
+import { ROUTE_PATH } from '../../constants/route';
 
 const { Screen, Navigator } = createStackNavigator();
 
 const UserScreenNavigation = () => {
   return (
     <NavigationContainer>
-      <Navigator initialRouteName={RoutePath.HABIT_LIST_HOME}>
-        <Screen name={RoutePath.SOCIAL} component={Social} />
-        <Screen name={RoutePath.MY_PAGE} component={MyPage} />
-        <Screen name={RoutePath.HABIT_PLUS} component={HabitPlus} />
-        <Screen name={RoutePath.GROWING_TREE} component={GrowingTree} />
-        <Screen name={RoutePath.HABIT_COMPLETE} component={HabitComplete} />
-        <Screen name={RoutePath.HABIT_LIST_HOME} component={HabitListHome} />
-        <Screen name={RoutePath.USER_STATISTICS} component={UserStatistics} />
+      <Navigator initialRouteName={ROUTE_PATH.HABIT_LIST_HOME}>
+        <Screen name={ROUTE_PATH.SOCIAL} component={Social} />
+        <Screen name={ROUTE_PATH.MY_PAGE} component={MyPage} />
+        <Screen name={ROUTE_PATH.HABIT_PLUS} component={HabitPlus} />
+        <Screen name={ROUTE_PATH.GROWING_TREE} component={GrowingTree} />
+        <Screen name={ROUTE_PATH.HABIT_COMPLETE} component={HabitComplete} />
+        <Screen name={ROUTE_PATH.HABIT_LIST_HOME} component={HabitListHome} />
+        <Screen name={ROUTE_PATH.USER_STATISTICS} component={UserStatistics} />
       </Navigator>
     </NavigationContainer>
   );

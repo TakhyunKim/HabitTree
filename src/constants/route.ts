@@ -1,4 +1,4 @@
-export const RoutePath = {
+export const ROUTE_PATH = {
   GROWING_TREE: 'growingTree',
   HABIT_COMPLETE: 'habitComplete',
   HABIT_LIST_HOME: 'habitListHome',

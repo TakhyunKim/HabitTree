@@ -14,13 +14,13 @@ const getWeek = (): DateInfo => {
   const threeDaysLater = getDateRelativeToToday(3);
 
   const dateInfo: DateInfo = {
-    일: threeDaysAgo.getDate(),
-    월: twoDaysAgo.getDate(),
-    화: yesterday.getDate(),
-    수: today.getDate(),
-    목: tomorrow.getDate(),
-    금: twoDaysLater.getDate(),
-    토: threeDaysLater.getDate(),
+    일: threeDaysAgo,
+    월: twoDaysAgo,
+    화: yesterday,
+    수: today,
+    목: tomorrow,
+    금: twoDaysLater,
+    토: threeDaysLater,
   };
 
   return dateInfo;

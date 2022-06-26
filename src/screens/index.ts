@@ -5,6 +5,7 @@ import GrowingTree from './GrowingTree';
 import HabitComplete from './HabitComplete';
 import HabitListHome from './HabitListHome';
 import UserStatistics from './UserStatistics';
+import ScreenContainer from './ScreenContainer';
 
 export {
   MyPage,
@@ -14,4 +15,5 @@ export {
   HabitComplete,
   HabitListHome,
   UserStatistics,
+  ScreenContainer,
 };

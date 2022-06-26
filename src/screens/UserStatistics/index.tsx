@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+
+import { ScreenContainer } from '../';
 
 const UserStatistics = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <ScreenContainer>
       <Text>UserStatistics</Text>
-    </View>
+    </ScreenContainer>
   );
 };
 

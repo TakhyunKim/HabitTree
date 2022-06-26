@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+
+import { ScreenContainer } from '../';
 
 const Social = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <ScreenContainer>
       <Text>Social</Text>
-    </View>
+    </ScreenContainer>
   );
 };
 

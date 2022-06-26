@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+
+import { ScreenContainer } from '../';
 
 const HabitPlus = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <ScreenContainer>
       <Text>HabitPlus</Text>
-    </View>
+    </ScreenContainer>
   );
 };
 

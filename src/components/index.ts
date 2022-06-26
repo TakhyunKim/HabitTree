@@ -1,3 +1,4 @@
 import DayViewer from './DayViewer';
+import YearAndMonth from './YearAndMonth';
 
-export { DayViewer };
+export { DayViewer, YearAndMonth };

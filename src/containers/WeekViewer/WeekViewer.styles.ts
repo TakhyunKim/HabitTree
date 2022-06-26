@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
     paddingTop: 50,
+    backgroundColor: '#ffffff',
   },
 });

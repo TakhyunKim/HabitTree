@@ -1,3 +1,4 @@
+import HabitList from './HabitList';
 import WeekViewer from './WeekViewer';
 
-export { WeekViewer };
+export { HabitList, WeekViewer };

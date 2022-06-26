@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { useRecoilValue } from 'recoil';
 
-import { DayViewer } from '../../components';
+import { DayViewer, YearAndMonth } from '../../components';
 
 import { habitDay } from '../../relay/atoms';
 
@@ -20,14 +20,19 @@ const WeekViewer = () => {
 
   return (
     <View style={styles.WeekViewerContainer}>
-      {dayOfTheWeekList.map(dayOfTheWeek => (
-        <DayViewer
-          key={dayOfTheWeek}
-          day={weak[dayOfTheWeek].getDate()}
-          dayOfTheWeek={dayOfTheWeek}
-          isTargetDay={isSameDate(habitTargetDate, weak[dayOfTheWeek])}
-        />
-      ))}
+      <View style={styles.WeekViewerChildrenContainer}>
+        <YearAndMonth day={habitTargetDate} />
+        <View style={styles.DayViewerWrapper}>
+          {dayOfTheWeekList.map(dayOfTheWeek => (
+            <DayViewer
+              key={dayOfTheWeek}
+              day={weak[dayOfTheWeek].getDate()}
+              dayOfTheWeek={dayOfTheWeek}
+              isTargetDay={isSameDate(habitTargetDate, weak[dayOfTheWeek])}
+            />
+          ))}
+        </View>
+      </View>
     </View>
   );
 };

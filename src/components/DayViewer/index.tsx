@@ -9,7 +9,7 @@ const DayViewer = ({ day, dayOfTheWeek }: DayViewerProps) => {
     <View style={styles.dayViewerContainer}>
       <Text style={styles.dayOfTheWeekTextWrapper}>{dayOfTheWeek}</Text>
       <View>
-        <Text>{day}</Text>
+        <Text style={styles.dayWrapper}>{day}</Text>
       </View>
     </View>
   );

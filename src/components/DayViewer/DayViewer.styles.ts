@@ -7,7 +7,12 @@ export const styles = StyleSheet.create({
     margin: 17,
   },
   dayOfTheWeekTextWrapper: {
-    color: '#414141',
     marginBottom: 5,
+    fontWeight: 'bold',
+    color: '#414141',
+  },
+  dayWrapper: {
+    fontWeight: 'bold',
+    color: '#414141',
   },
 });

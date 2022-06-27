@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HabitList, WeekViewer } from '../../containers';
+import { HabitList, WeekViewer, HabitPlusButtons } from '../../containers';
 
 import { ScreenContainer } from '../';
 
@@ -9,6 +9,7 @@ const HabitListHome = () => {
     <ScreenContainer>
       <WeekViewer />
       <HabitList />
+      <HabitPlusButtons />
     </ScreenContainer>
   );
 };

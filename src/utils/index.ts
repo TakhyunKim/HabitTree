@@ -3,7 +3,6 @@ import isSameDate from './isSameDate';
 import getKoreaDate from './getKoreaDate';
 import getAnimationStyle from './getAnimationStyle';
 import getAnimationMultiStyle from './getAnimationMultiStyle';
-import getDateRelativeToToday from './getDateRelativeToToday';
 
 export {
   getWeek,
@@ -11,5 +10,4 @@ export {
   getKoreaDate,
   getAnimationStyle,
   getAnimationMultiStyle,
-  getDateRelativeToToday,
 };

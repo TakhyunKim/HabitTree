@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Animated } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 
@@ -71,6 +71,10 @@ const HabitPlusButtons = () => {
   const handleHabitPlusButtonClick = () => {
     setIsActiveOfPlus(prevState => !prevState);
   };
+
+  useEffect(() => {
+    return navigation.addListener('focus', () => setIsActiveOfPlus(false));
+  }, [navigation]);
 
   return (
     <View style={style.habitPlusButtonsContainer}>

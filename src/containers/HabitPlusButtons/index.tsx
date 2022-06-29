@@ -6,20 +6,15 @@ import { HabitPlus, HabitPlusWithText } from '../../components';
 
 import { useFlagAnimation } from '../../hooks';
 import { getAnimationMultiStyle } from '../../utils';
-import { AnimationStyleInfo } from '../../types';
+import { AnimationStyleInfo, StackParams } from '../../types';
 import { ROUTE_PATH } from '../../constants/route';
 
 import { styles } from './HabitPlusButtons.styles';
 
-type HabitPlusNavigation = {
-  habitPlus: undefined;
-  habitComplete: undefined;
-};
-
 const HabitPlusButtons = () => {
   const [isActiveOfPlus, setIsActiveOfPlus] = useState<boolean>(false);
 
-  const navigation = useNavigation<NavigationProp<HabitPlusNavigation>>();
+  const navigation = useNavigation<NavigationProp<StackParams>>();
 
   const style = styles(isActiveOfPlus);
 

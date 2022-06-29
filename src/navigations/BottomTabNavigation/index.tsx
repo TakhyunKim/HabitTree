@@ -13,6 +13,7 @@ import {
 } from '../../screens';
 
 import { ROUTE_PATH, BOTTOM_TAB_NAVIGATION_NAME } from '../../constants/route';
+import { BottomTabParams } from '../../types';
 
 import {
   HomeIcon,
@@ -22,7 +23,7 @@ import {
   AnalyticsIcon,
 } from '../../assets';
 
-const { Screen, Navigator } = createBottomTabNavigator();
+const { Screen, Navigator } = createBottomTabNavigator<BottomTabParams>();
 
 const BottomTabNavigation = () => {
   return (

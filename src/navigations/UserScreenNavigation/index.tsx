@@ -7,8 +7,11 @@ import { HabitPlus, HabitComplete } from '../../screens';
 import { BottomTabNavigation } from '../';
 
 import { ROUTE_PATH, NAVIGATION_NAME } from '../../constants/route';
+import { StackParams, NavigationParams } from '../../types';
 
-const { Screen, Navigator } = createStackNavigator();
+const { Screen, Navigator } = createStackNavigator<
+  StackParams & NavigationParams
+>();
 
 const UserScreenNavigation = () => {
   return (

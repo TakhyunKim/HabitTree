@@ -15,5 +15,7 @@ export const styles = StyleSheet.create({
   textInput: {
     width: '100%',
     height: '100%',
+
+    fontWeight: 'bold',
   },
 });

@@ -4,6 +4,8 @@ import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
 import { ROUTE_PATH, NAVIGATION_NAME } from '../constants/route';
 
+export type HabitPlusOption = 'week' | 'day';
+
 export type RoutePathKeysType = keyof typeof ROUTE_PATH;
 
 export type RoutePathValuesType = typeof ROUTE_PATH[RoutePathKeysType];
@@ -15,7 +17,7 @@ export type NavigationNameValuesType =
 
 export type BottomTabRoutePathValues = Exclude<
   RoutePathValuesType,
-  'habitPlus' | 'habitComplete'
+  'habitPlus'
 >;
 
 export type StackRoutePathValues = Extract<
@@ -23,6 +25,11 @@ export type StackRoutePathValues = Extract<
   'habitPlus' | 'habitComplete'
 >;
 
+export type HabitPlusValue = Extract<RoutePathValuesType, 'habitPlus'>;
+
+export type HabitPlusParams = {
+  [habitPlus in HabitPlusValue]: { habitPlusOption: HabitPlusOption };
+};
 export type NavigationParams = Record<NavigationNameValuesType, undefined>;
 export type StackParams = Record<StackRoutePathValues, undefined>;
 export type BottomTabParams = Record<BottomTabRoutePathValues, undefined>;

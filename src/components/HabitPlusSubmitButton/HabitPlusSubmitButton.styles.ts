@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '15%',
+    height: '13%',
     backgroundColor: '#45E456',
   },
   submitButtonTitleText: {

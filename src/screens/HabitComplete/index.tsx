@@ -1,12 +1,21 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import { ScreenContainer } from '../';
 
-const HabitComplete = () => {
+import {
+  ScreenHeader,
+  HabitComplete as HabitCompleteContainer,
+  HabitCompleteSubmit,
+} from '../../containers';
+
+import { HabitCompleteProp } from './HabitComplete.types';
+
+const HabitComplete = ({ route }: HabitCompleteProp) => {
   return (
     <ScreenContainer>
-      <Text>HabitComplete</Text>
+      <ScreenHeader headerTitle="목표 완료" />
+      <HabitCompleteContainer {...route.params} />
+      <HabitCompleteSubmit />
     </ScreenContainer>
   );
 };

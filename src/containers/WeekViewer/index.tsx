@@ -11,7 +11,7 @@ import { Week } from '../../types';
 
 import { styles } from './WeekViewer.styles';
 
-const dayOfTheWeekList: Week[] = ['일', '월', '화', '수', '목', '금', '토'];
+const dayOfTheWeekList: Week[] = ['월', '화', '수', '목', '금', '토', '일'];
 
 const WeekViewer = () => {
   const habitTargetDate = useRecoilValue(habitDay);

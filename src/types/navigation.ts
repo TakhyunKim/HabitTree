@@ -27,6 +27,18 @@ export type StackRoutePathValues = Extract<
 
 export type HabitPlusValue = Extract<RoutePathValuesType, 'habitPlus'>;
 
+export type HabitCompleteValue = Extract<RoutePathValuesType, 'habitComplete'>;
+
+export type HabitCompleteParams = {
+  [habitComplete in HabitCompleteValue]: {
+    date: Date;
+    habitTitle: string;
+    isPrivate: boolean;
+    mainImage?: string;
+    description?: string;
+  };
+};
+
 export type HabitPlusParams = {
   [habitPlus in HabitPlusValue]: { habitPlusOption: HabitPlusOption };
 };

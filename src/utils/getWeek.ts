@@ -1,26 +1,24 @@
 import { DateInfo } from '../types';
-
-import { getDateRelativeToToday } from './';
-
 const getWeek = (): DateInfo => {
   const today = new Date();
+  const first = today.getDate() - today.getDay() + 1;
 
-  const yesterday = getDateRelativeToToday(-1);
-  const twoDaysAgo = getDateRelativeToToday(-2);
-  const threeDaysAgo = getDateRelativeToToday(-3);
-
-  const tomorrow = getDateRelativeToToday(1);
-  const twoDaysLater = getDateRelativeToToday(2);
-  const threeDaysLater = getDateRelativeToToday(3);
+  const monday = new Date(today.setDate(first));
+  const tuesday = new Date(today.setDate(first + 1));
+  const wednesday = new Date(today.setDate(first + 2));
+  const thursday = new Date(today.setDate(first + 3));
+  const friday = new Date(today.setDate(first + 4));
+  const saturday = new Date(today.setDate(first + 6));
+  const sunday = new Date(today.setDate(first + 7));
 
   const dateInfo: DateInfo = {
-    일: threeDaysAgo,
-    월: twoDaysAgo,
-    화: yesterday,
-    수: today,
-    목: tomorrow,
-    금: twoDaysLater,
-    토: threeDaysLater,
+    월: monday,
+    화: tuesday,
+    수: wednesday,
+    목: thursday,
+    금: friday,
+    토: saturday,
+    일: sunday,
   };
 
   return dateInfo;

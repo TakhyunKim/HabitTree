@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { View, Animated } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 import { HabitPlus, HabitPlusWithText } from '../../components';
 
 import { useFlagAnimation } from '../../hooks';
 import { getAnimationMultiStyle } from '../../utils';
 import { AnimationStyleInfo } from '../../types';
+import { ROUTE_PATH } from '../../constants/route';
 
 import { styles } from './HabitPlusButtons.styles';
 
+type HabitPlusNavigation = {
+  habitPlus: undefined;
+  habitComplete: undefined;
+};
+
 const HabitPlusButtons = () => {
   const [isActiveOfPlus, setIsActiveOfPlus] = useState<boolean>(false);
+
+  const navigation = useNavigation<NavigationProp<HabitPlusNavigation>>();
 
   const style = styles(isActiveOfPlus);
 
@@ -73,9 +82,9 @@ const HabitPlusButtons = () => {
           },
         ]}>
         <HabitPlusWithText
-          description="주간 목표 추가"
+          description="오늘 목표 추가"
           backgroundColor="#AFA800"
-          onPress={() => console.log('주간 목표 추가')}
+          onPress={() => navigation.navigate(ROUTE_PATH.HABIT_PLUS)}
         />
       </Animated.View>
       <Animated.View
@@ -86,7 +95,7 @@ const HabitPlusButtons = () => {
           },
         ]}>
         <HabitPlusWithText
-          description="오늘 목표 추가"
+          description="주간 목표 추가"
           backgroundColor="#EDE636"
           onPress={() => console.log('오늘 목표 추가')}
         />

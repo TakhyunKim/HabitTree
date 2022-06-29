@@ -19,6 +19,6 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 10,
     backgroundColor: '#ffffff',
-    minHeight: 100,
+    minHeight: 110,
   },
 });

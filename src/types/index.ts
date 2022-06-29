@@ -1,7 +1,9 @@
 import { Week, DateInfo } from './date';
 import { AnimationStyleInfo } from './animationStyle';
 import {
+  HabitPlusOption,
   StackParams,
+  HabitPlusParams,
   BottomTabParams,
   NavigationParams,
   StackNavigationParams,
@@ -13,7 +15,9 @@ export type {
   Week,
   DateInfo,
   AnimationStyleInfo,
+  HabitPlusOption,
   StackParams,
+  HabitPlusParams,
   BottomTabParams,
   NavigationParams,
   StackNavigationParams,

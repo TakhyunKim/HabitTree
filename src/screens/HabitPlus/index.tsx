@@ -4,11 +4,21 @@ import { ScreenContainer } from '../';
 
 import { ScreenHeader, HabitAdd, DayHabitSubmit } from '../../containers';
 
-const HabitPlus = () => {
+import { HabitPlusProp } from './HabitPlus.types';
+
+const HabitPlus = ({ route }: HabitPlusProp) => {
+  const { habitPlusOption } = route.params;
+
   return (
     <ScreenContainer>
-      <ScreenHeader headerTitle="오늘 목표 추가하기" />
-      <HabitAdd />
+      <ScreenHeader
+        headerTitle={
+          habitPlusOption === 'day'
+            ? '오늘 목표 추가하기'
+            : '주간 목표 추가하기'
+        }
+      />
+      <HabitAdd habitAddOption={habitPlusOption} />
       <DayHabitSubmit />
     </ScreenContainer>
   );

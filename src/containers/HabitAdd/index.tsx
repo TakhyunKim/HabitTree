@@ -8,9 +8,10 @@ import { getKoreaDate } from '../../utils';
 
 import { habitDay } from '../../relay/atoms';
 
+import { HabitAddProps } from './HabitAdd.types';
 import { styles } from './HabitAdd.styles';
 
-const HabitAdd = () => {
+const HabitAdd = ({ habitAddOption }: HabitAddProps) => {
   const [text, setText] = useState<string>('');
 
   const today = useRecoilValue(habitDay);
@@ -19,7 +20,9 @@ const HabitAdd = () => {
     <View style={styles.HabitAddContainer}>
       <TextInput placeHolader="목표 타이틀" value={text} onChange={setText} />
       <HabitSettingBox settingTitle="기본 설정">
-        <HabitAddOption optionTitle="목표 시간 날짜" hasborderBottom>
+        <HabitAddOption
+          optionTitle={habitAddOption === 'day' ? '날짜' : '목표 시간 날짜'}
+          hasborderBottom>
           <Text style={{ fontWeight: 'bold', fontSize: 12 }}>
             {getKoreaDate(today)}
           </Text>
@@ -29,11 +32,13 @@ const HabitAdd = () => {
             추가하기
           </Text>
         </HabitAddOption>
-        <HabitAddOption optionTitle="반복" hasborderBottom>
-          <Text style={{ fontWeight: 'bold', fontSize: 12, opacity: 0.3 }}>
-            매일
-          </Text>
-        </HabitAddOption>
+        {habitAddOption === 'week' && (
+          <HabitAddOption optionTitle="반복" hasborderBottom>
+            <Text style={{ fontWeight: 'bold', fontSize: 12, opacity: 0.3 }}>
+              매일
+            </Text>
+          </HabitAddOption>
+        )}
         <HabitAddOption optionTitle="공개">
           <Text style={{ fontWeight: 'bold', fontSize: 12 }}>공개하기</Text>
         </HabitAddOption>

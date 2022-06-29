@@ -1,12 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import { ScreenContainer } from '../';
+
+import { ScreenHeader, HabitAdd, DayHabitSubmit } from '../../containers';
 
 const HabitPlus = () => {
   return (
     <ScreenContainer>
-      <Text>HabitPlus</Text>
+      <ScreenHeader headerTitle="오늘 목표 추가하기" />
+      <HabitAdd />
+      <DayHabitSubmit />
     </ScreenContainer>
   );
 };

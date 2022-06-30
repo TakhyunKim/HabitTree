@@ -1,12 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
+
+import { UserInfo, ScreenHeader } from '../../containers';
 
 import { ScreenContainer } from '../';
 
 const MyPage = () => {
   return (
     <ScreenContainer>
-      <Text>MyPage</Text>
+      <ScreenHeader headerTitle="마이페이지" />
+      <UserInfo />
     </ScreenContainer>
   );
 };

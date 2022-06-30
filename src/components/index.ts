@@ -1,3 +1,5 @@
+import Button from './Button';
+import Profile from './Profile';
 import DayViewer from './DayViewer';
 import HabitItem from './HabitItem';
 import HabitPlus from './HabitPlus';
@@ -10,6 +12,8 @@ import HabitPlusWithText from './HabitPlusWithText';
 import HabitPlusSubmitButton from './HabitPlusSubmitButton';
 
 export {
+  Button,
+  Profile,
   DayViewer,
   HabitItem,
   HabitPlus,

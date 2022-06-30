@@ -1,3 +1,4 @@
+import { PlantGrade } from './user';
 import { Week, DateInfo } from './date';
 import { AnimationStyleInfo } from './animationStyle';
 import {
@@ -15,6 +16,7 @@ import {
 export type {
   Week,
   DateInfo,
+  PlantGrade,
   AnimationStyleInfo,
   HabitPlusOption,
   StackParams,

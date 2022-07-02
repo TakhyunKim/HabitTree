@@ -1,8 +1,9 @@
 import { DateInfo } from '../types';
+
 const getWeek = (): DateInfo => {
   const today = new Date();
   const first = today.getDate() - today.getDay() + 1;
-  console.log(first);
+
   const monday = new Date(new Date().setDate(first));
   const tuesday = new Date(new Date().setDate(first + 1));
   const wednesday = new Date(new Date().setDate(first + 2));

@@ -11,6 +11,8 @@ import HabitAddOption from './HabitAddOption';
 import HabitPlusWithText from './HabitPlusWithText';
 import WhiteBoxWithSubTitle from './WhiteBoxWithSubTitle';
 import HabitPlusSubmitButton from './HabitPlusSubmitButton';
+import PortraitModeProgressBar from './PortraitModeProgressBar';
+import PortraitModeProgressBarList from './PortraitModeProgressBarList';
 
 export {
   Button,
@@ -26,4 +28,6 @@ export {
   WhiteBoxWithSubTitle,
   HabitPlusWithText,
   HabitPlusSubmitButton,
+  PortraitModeProgressBar,
+  PortraitModeProgressBarList,
 };

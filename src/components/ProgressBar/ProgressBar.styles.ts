@@ -28,6 +28,7 @@ export const styles = (progressPercent: number) =>
       borderRadius: 10,
     },
     progressPercentText: {
+      fontSize: 12,
       fontWeight: 'bold',
       color:
         progressPercent < 70

@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import {
   ProgressBar,
   StatisticsText,
+  StatisticsResult,
   WaterCanWithText,
   WhiteBoxWithSubTitle,
   PortraitModeProgressBarList,
@@ -35,6 +36,9 @@ const Statistics = () => {
           <WaterCanWithText value={30} />
           <StatisticsText totalWater={30} weekTotalWater={5} userName="탁현" />
         </View>
+      </WhiteBoxWithSubTitle>
+      <WhiteBoxWithSubTitle subTitle="지표 총평" minHeight={110}>
+        <StatisticsResult highestDay="수요일" todayCompletePercent={30} />
       </WhiteBoxWithSubTitle>
     </View>
   );

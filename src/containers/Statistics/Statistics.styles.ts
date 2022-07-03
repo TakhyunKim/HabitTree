@@ -5,4 +5,9 @@ export const styles = StyleSheet.create({
     width: '90%',
     height: '100%',
   },
+  waterCanStatisticsWrapper: {
+    height: 100,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
 });

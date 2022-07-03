@@ -2,8 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 
 import {
-  WhiteBoxWithSubTitle,
   ProgressBar,
+  StatisticsText,
+  WaterCanWithText,
+  WhiteBoxWithSubTitle,
   PortraitModeProgressBarList,
 } from '../../components';
 
@@ -27,6 +29,12 @@ const Statistics = () => {
             일: 0,
           }}
         />
+      </WhiteBoxWithSubTitle>
+      <WhiteBoxWithSubTitle subTitle="나무에 준 물 리터는?" minHeight={110}>
+        <View style={styles.waterCanStatisticsWrapper}>
+          <WaterCanWithText value={30} />
+          <StatisticsText totalWater={30} weekTotalWater={5} userName="탁현" />
+        </View>
       </WhiteBoxWithSubTitle>
     </View>
   );

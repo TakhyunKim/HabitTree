@@ -1,12 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import { ScreenContainer } from '../';
+
+import { ScreenHeader, Statistics } from '../../containers';
 
 const UserStatistics = () => {
   return (
     <ScreenContainer>
-      <Text>UserStatistics</Text>
+      <ScreenHeader headerTitle="나의 성공 지표" />
+      <Statistics />
     </ScreenContainer>
   );
 };

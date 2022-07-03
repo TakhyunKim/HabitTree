@@ -7,8 +7,8 @@ import TextInput from './TextInput';
 import ScreenHeader from './ScreenHeader';
 import YearAndMonth from './YearAndMonth';
 import HabitAddOption from './HabitAddOption';
-import HabitSettingBox from './HabitSettingBox';
 import HabitPlusWithText from './HabitPlusWithText';
+import WhiteBoxWithSubTitle from './WhiteBoxWithSubTitle';
 import HabitPlusSubmitButton from './HabitPlusSubmitButton';
 
 export {
@@ -21,7 +21,7 @@ export {
   ScreenHeader,
   YearAndMonth,
   HabitAddOption,
-  HabitSettingBox,
+  WhiteBoxWithSubTitle,
   HabitPlusWithText,
   HabitPlusSubmitButton,
 };

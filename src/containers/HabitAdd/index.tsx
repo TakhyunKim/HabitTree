@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { View, Text } from 'react-native';
 
-import { TextInput, HabitAddOption, HabitSettingBox } from '../../components';
+import {
+  TextInput,
+  HabitAddOption,
+  WhiteBoxWithSubTitle,
+} from '../../components';
 
 import { getKoreaDate } from '../../utils';
 
@@ -19,7 +23,7 @@ const HabitAdd = ({ habitAddOption }: HabitAddProps) => {
   return (
     <View style={styles.habitAddContainer}>
       <TextInput placeHolader="목표 타이틀" value={text} onChange={setText} />
-      <HabitSettingBox settingTitle="기본 설정">
+      <WhiteBoxWithSubTitle subTitle="기본 설정" minHeight={110}>
         <HabitAddOption
           optionTitle={habitAddOption === 'day' ? '날짜' : '목표 시간 날짜'}
           hasborderBottom>
@@ -36,12 +40,12 @@ const HabitAdd = ({ habitAddOption }: HabitAddProps) => {
         <HabitAddOption optionTitle="공개">
           <Text style={styles.habitAddOptionText}>공개하기</Text>
         </HabitAddOption>
-      </HabitSettingBox>
-      <HabitSettingBox settingTitle="추가 설정">
+      </WhiteBoxWithSubTitle>
+      <WhiteBoxWithSubTitle subTitle="추가 설정" minHeight={110}>
         <HabitAddOption optionTitle="대표 이미지" hasborderBottom>
           <Text style={styles.habitAddOptionTextWithOpacity}>첨부하기</Text>
         </HabitAddOption>
-      </HabitSettingBox>
+      </WhiteBoxWithSubTitle>
     </View>
   );
 };

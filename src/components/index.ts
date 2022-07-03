@@ -7,7 +7,9 @@ import TextInput from './TextInput';
 import ProgressBar from './ProgressBar';
 import ScreenHeader from './ScreenHeader';
 import YearAndMonth from './YearAndMonth';
+import StatisticsText from './StatisticsText';
 import HabitAddOption from './HabitAddOption';
+import WaterCanWithText from './WaterCanWithText';
 import HabitPlusWithText from './HabitPlusWithText';
 import WhiteBoxWithSubTitle from './WhiteBoxWithSubTitle';
 import HabitPlusSubmitButton from './HabitPlusSubmitButton';
@@ -24,7 +26,9 @@ export {
   ProgressBar,
   ScreenHeader,
   YearAndMonth,
+  StatisticsText,
   HabitAddOption,
+  WaterCanWithText,
   WhiteBoxWithSubTitle,
   HabitPlusWithText,
   HabitPlusSubmitButton,

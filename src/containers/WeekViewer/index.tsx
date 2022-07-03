@@ -7,11 +7,9 @@ import { DayViewer, YearAndMonth } from '../../components';
 import { habitDay } from '../../relay/atoms';
 
 import { getWeek, isSameDate } from '../../utils';
-import { Week } from '../../types';
+import { DAY_OF_THE_WEEK_LIST } from '../../constants/day';
 
 import { styles } from './WeekViewer.styles';
-
-const dayOfTheWeekList: Week[] = ['월', '화', '수', '목', '금', '토', '일'];
 
 const WeekViewer = () => {
   const habitTargetDate = useRecoilValue(habitDay);
@@ -23,7 +21,7 @@ const WeekViewer = () => {
       <View style={styles.WeekViewerChildrenContainer}>
         <YearAndMonth day={habitTargetDate} />
         <View style={styles.DayViewerWrapper}>
-          {dayOfTheWeekList.map(dayOfTheWeek => (
+          {DAY_OF_THE_WEEK_LIST.map(dayOfTheWeek => (
             <DayViewer
               key={dayOfTheWeek}
               day={weak[dayOfTheWeek].getDate()}

@@ -4,7 +4,7 @@ import { useRecoilValue } from 'recoil';
 
 import { DayViewer, YearAndMonth } from '../../components';
 
-import { habitDay } from '../../relay/atoms';
+import { habitDay } from '../../recoil/atoms';
 
 import { getWeek, isSameDate } from '../../utils';
 import { DAY_OF_THE_WEEK_LIST } from '../../constants/day';

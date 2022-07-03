@@ -6,7 +6,7 @@ import { TextInput, HabitAddOption, HabitSettingBox } from '../../components';
 
 import { getKoreaDate } from '../../utils';
 
-import { habitDay } from '../../relay/atoms';
+import { habitDay } from '../../recoil/atoms';
 
 import { HabitAddProps } from './HabitAdd.types';
 import { styles } from './HabitAdd.styles';

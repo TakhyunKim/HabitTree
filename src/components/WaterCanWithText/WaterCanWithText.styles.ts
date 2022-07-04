@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
   waterCanWithTextContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 20,
+    marginLeft: 10,
+    marginRight: 10,
   },
   waterText: {
     fontWeight: 'bold',

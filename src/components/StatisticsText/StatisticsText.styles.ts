@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   statisticsTextContainer: {
-    margin: 30,
+    marginLeft: 15,
   },
   defaultText: {
     fontSize: 12,

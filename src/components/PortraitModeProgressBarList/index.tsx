@@ -14,7 +14,7 @@ const PortraitModeProgressBarList = ({
   return (
     <View style={styles.portraitModeProgressBarListContainer}>
       {DAY_OF_THE_WEEK_LIST.map(day => (
-        <View style={styles.ProgressBarListWrapper} key={day}>
+        <View style={styles.progressBarWrapper} key={day}>
           <PortraitModeProgressBar percent={weekPercent[day]} />
           <Text style={styles.dayText}>{day}</Text>
         </View>

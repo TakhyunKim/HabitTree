@@ -7,10 +7,9 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-end',
     width: '100%',
     height: 160,
-    marginTop: 10,
-    marginBottom: 10,
+    padding: 10,
   },
-  ProgressBarListWrapper: {
+  progressBarWrapper: {
     justifyContent: 'flex-end',
     alignItems: 'center',
     width: '8%',

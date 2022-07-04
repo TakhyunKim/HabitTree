@@ -14,17 +14,17 @@ const useFlagAnimation = ({
 }: UseFlagAnimationParams): Animated.Value => {
   const animatedValue = useRef(new Animated.Value(0)).current;
 
-  const startAnimation = (toValue: number) => {
-    Animated.timing(animatedValue, {
-      toValue,
-      duration,
-      useNativeDriver: true,
-    }).start();
-  };
-
   useEffect(() => {
+    const startAnimation = (toValue: number) => {
+      Animated.timing(animatedValue, {
+        toValue,
+        duration,
+        useNativeDriver: true,
+      }).start();
+    };
+
     startAnimation(flag ? 0 : animationToValue);
-  });
+  }, [animatedValue, animationToValue, duration, flag]);
 
   return animatedValue;
 };

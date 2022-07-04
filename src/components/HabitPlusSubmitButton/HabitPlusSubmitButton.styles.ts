@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#45E456',
   },
   submitButtonTitleText: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#414141',
   },

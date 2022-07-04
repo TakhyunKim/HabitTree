@@ -8,7 +8,7 @@ export const styles = (minHeight?: number) =>
     },
     subTitleText: {
       marginLeft: 12,
-      fontSize: 12,
+      fontSize: 13,
       fontWeight: 'bold',
       color: '#414141',
     },

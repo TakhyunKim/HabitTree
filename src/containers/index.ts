@@ -6,7 +6,9 @@ import Statistics from './Statistics';
 import ScreenHeader from './ScreenHeader';
 import HabitComplete from './HabitComplete';
 import DayHabitSubmit from './DayHabitSubmit';
+import SocialProfiles from './SocialProfiles';
 import HabitPlusButtons from './HabitPlusButtons';
+import SocialContentsList from './SocialContentsList';
 import HabitCompleteSubmit from './HabitCompleteSubmit';
 
 export {
@@ -18,6 +20,8 @@ export {
   ScreenHeader,
   HabitComplete,
   DayHabitSubmit,
+  SocialProfiles,
   HabitPlusButtons,
+  SocialContentsList,
   HabitCompleteSubmit,
 };

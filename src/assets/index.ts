@@ -1,4 +1,5 @@
 import HomeIcon from './home.svg';
+import LandIcon from './land.svg';
 import TreeIcon from './tree.svg';
 import UserIcon from './user.svg';
 import PlusIcon from './plus.svg';
@@ -9,6 +10,7 @@ import WateringCan from './watering-can.svg';
 
 export {
   HomeIcon,
+  LandIcon,
   TreeIcon,
   UserIcon,
   PlusIcon,

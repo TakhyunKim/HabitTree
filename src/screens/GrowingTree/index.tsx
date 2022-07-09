@@ -1,12 +1,19 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View } from 'react-native';
 
 import { ScreenContainer } from '../';
+
+import { GrowingTreeResult, GrowingTreeImage } from '../../containers';
+
+import { styles } from './GrowingTress.styles';
 
 const GrowingTree = () => {
   return (
     <ScreenContainer>
-      <Text>GrowingTree</Text>
+      <View style={styles.growingTreeContainer}>
+        <GrowingTreeResult />
+        <GrowingTreeImage />
+      </View>
     </ScreenContainer>
   );
 };

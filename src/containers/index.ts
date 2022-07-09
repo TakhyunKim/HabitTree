@@ -8,6 +8,8 @@ import HabitComplete from './HabitComplete';
 import DayHabitSubmit from './DayHabitSubmit';
 import SocialProfiles from './SocialProfiles';
 import HabitPlusButtons from './HabitPlusButtons';
+import GrowingTreeImage from './GrowingTreeImage';
+import GrowingTreeResult from './GrowingTreeResult';
 import SocialContentsList from './SocialContentsList';
 import HabitCompleteSubmit from './HabitCompleteSubmit';
 
@@ -22,6 +24,8 @@ export {
   DayHabitSubmit,
   SocialProfiles,
   HabitPlusButtons,
+  GrowingTreeImage,
+  GrowingTreeResult,
   SocialContentsList,
   HabitCompleteSubmit,
 };

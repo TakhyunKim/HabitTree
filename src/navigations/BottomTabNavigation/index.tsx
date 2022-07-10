@@ -1,7 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 
-import React from 'react';
-import { Text } from 'react-native';
+import React, { ReactNode } from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  GestureResponderEvent,
+} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import {
@@ -22,6 +27,38 @@ import {
   SocialIcon,
   AnalyticsIcon,
 } from '../../assets';
+
+interface CustomTabBarButtonProps {
+  children: ReactNode;
+  onPress?: (
+    event:
+      | GestureResponderEvent
+      | React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => void;
+}
+
+const CustomTabBarButton = ({ children, onPress }: CustomTabBarButtonProps) => (
+  <TouchableOpacity
+    style={{
+      top: -30,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+    onPress={onPress}
+    activeOpacity={1}>
+    <View>
+      <View
+        style={{
+          width: 55,
+          height: 55,
+          borderRadius: 50,
+          backgroundColor: '#8BF996',
+        }}>
+        {children}
+      </View>
+    </View>
+  </TouchableOpacity>
+);
 
 const { Screen, Navigator } = createBottomTabNavigator<BottomTabParams>();
 
@@ -83,9 +120,10 @@ const BottomTabNavigation = () => {
             <TreeIcon
               width={45}
               height={45}
-              fill={focused ? '#45E456' : '#A0A0A0'}
+              fill={focused ? '#414141' : '#A0A0A0'}
             />
           ),
+          tabBarButton: props => <CustomTabBarButton {...props} />,
         }}
       />
       <Screen

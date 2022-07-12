@@ -12,7 +12,11 @@ const GrowingTreeResult = () => {
   return (
     <View style={styles.growingTreeResultContainer}>
       <WaterProgressWithGrade totalWater={30} grade="새싹" />
-      <GrowingTreeResultText />
+      <GrowingTreeResultText
+        userName="탁현"
+        grade="새싹"
+        waterNeededForUgrade={30}
+      />
     </View>
   );
 };

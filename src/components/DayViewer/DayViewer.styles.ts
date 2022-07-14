@@ -17,7 +17,7 @@ export const styles = (isTargetDay: boolean) =>
       alignItems: 'center',
       width: 30,
       height: 30,
-      backgroundColor: isTargetDay ? '#8BF996' : 'none',
+      backgroundColor: isTargetDay ? '#8BF996' : undefined,
       borderRadius: 50,
     },
     dayText: {

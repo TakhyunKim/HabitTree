@@ -4,4 +4,5 @@ export interface DayViewerProps {
   day: number;
   dayOfTheWeek: Week;
   isTargetDay: boolean;
+  onPress: () => void;
 }

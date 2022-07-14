@@ -1,14 +1,18 @@
 import React from 'react';
+import { View } from 'react-native';
 
 import { ScreenContainer } from '../';
 
-import { ScreenHeader, Statistics } from '../../containers';
+import { Statistics } from '../../containers';
+
+import { styles } from './UserStatistics.styles';
 
 const UserStatistics = () => {
   return (
     <ScreenContainer>
-      <ScreenHeader headerTitle="나의 성공 지표" />
-      <Statistics />
+      <View style={styles.growingTreeContainer}>
+        <Statistics />
+      </View>
     </ScreenContainer>
   );
 };

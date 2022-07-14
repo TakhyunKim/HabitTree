@@ -12,12 +12,12 @@ export const styles = (isTargetDay: boolean) =>
       fontWeight: 'bold',
       color: '#414141',
     },
-    dayTextrWrapper: {
+    dayTextWrapper: {
       justifyContent: 'center',
       alignItems: 'center',
       width: 30,
       height: 30,
-      backgroundColor: isTargetDay ? '#8BF996' : 'none',
+      backgroundColor: isTargetDay ? '#8BF996' : undefined,
       borderRadius: 50,
     },
     dayText: {

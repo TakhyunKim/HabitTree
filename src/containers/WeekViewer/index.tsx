@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 
 import { DayViewer, YearAndMonth } from '../../components';
 
@@ -12,7 +12,7 @@ import { DAY_OF_THE_WEEK_LIST } from '../../constants/day';
 import { styles } from './WeekViewer.styles';
 
 const WeekViewer = () => {
-  const habitTargetDate = useRecoilValue(habitDay);
+  const [habitTargetDate, setHabitTargetDate] = useRecoilState(habitDay);
 
   const weak = getWeek();
 
@@ -27,6 +27,7 @@ const WeekViewer = () => {
               day={weak[dayOfTheWeek].getDate()}
               dayOfTheWeek={dayOfTheWeek}
               isTargetDay={isSameDate(habitTargetDate, weak[dayOfTheWeek])}
+              onPress={() => setHabitTargetDate(weak[dayOfTheWeek])}
             />
           ))}
         </View>

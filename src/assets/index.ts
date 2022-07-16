@@ -9,6 +9,7 @@ import SocialIcon from './social.svg';
 import TeaLeatIcon from './tea-leaf.svg';
 import AnalyticsIcon from './analytics.svg';
 import WateringCan from './watering-can.svg';
+import EmptyPackageIcon from './empty-package.svg';
 import WateringFillCan from './watering-can-fill.svg';
 
 export {
@@ -24,4 +25,5 @@ export {
   WateringCan,
   AnalyticsIcon,
   WateringFillCan,
+  EmptyPackageIcon,
 };

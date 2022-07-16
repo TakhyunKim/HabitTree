@@ -1,4 +1,5 @@
 import { PlantGrade } from './user';
+import { HabitItem } from './habit';
 import { Week, DateInfo } from './date';
 import { AnimationStyleInfo } from './animationStyle';
 import {
@@ -16,6 +17,7 @@ import {
 export type {
   Week,
   DateInfo,
+  HabitItem,
   PlantGrade,
   AnimationStyleInfo,
   HabitPlusOption,

@@ -1,22 +1,16 @@
-interface HabitItem {
-  date: string;
-  isPrivate: boolean;
-  isComplete: boolean;
-  description: string;
-  title: string;
-}
+import { HabitItem } from '../types';
 
 export const habitList: { [date: string]: HabitItem[] } = {
   '11': [
     {
-      date: '2022년 07월 11일',
+      date: new Date(2022, 6, 11),
       isPrivate: false,
       isComplete: false,
       description: '',
       title: '월요일 평화롭게 보내기',
     },
     {
-      date: '2022년 07월 11일',
+      date: new Date(2022, 6, 11),
       isPrivate: false,
       isComplete: false,
       description: '',
@@ -25,7 +19,7 @@ export const habitList: { [date: string]: HabitItem[] } = {
   ],
   '12': [
     {
-      date: '2022년 07월 12일',
+      date: new Date(2022, 6, 12),
       isPrivate: false,
       isComplete: false,
       description: '',
@@ -35,21 +29,21 @@ export const habitList: { [date: string]: HabitItem[] } = {
   '13': [],
   '14': [
     {
-      date: '2022년 07월 14일',
+      date: new Date(2022, 6, 14),
       isPrivate: true,
       isComplete: true,
       description: '',
       title: '아침에 물을 마시자!',
     },
     {
-      date: '2022년 07월 14일',
+      date: new Date(2022, 6, 14),
       isPrivate: false,
       isComplete: false,
       description: '',
       title: 'TODO 리스트 작성',
     },
     {
-      date: '2022년 07월 14일',
+      date: new Date(2022, 6, 14),
       isPrivate: false,
       isComplete: true,
       description: '',
@@ -58,21 +52,21 @@ export const habitList: { [date: string]: HabitItem[] } = {
   ],
   '15': [
     {
-      date: '2022년 07월 15일',
+      date: new Date(2022, 6, 15),
       isPrivate: true,
       isComplete: true,
       description: '',
       title: '잠을 잘 자자',
     },
     {
-      date: '2022년 07월 15일',
+      date: new Date(2022, 6, 15),
       isPrivate: true,
       isComplete: true,
       description: '',
       title: '고구마 맛탕 해먹기',
     },
     {
-      date: '2022년 07월 15일',
+      date: new Date(2022, 6, 15),
       isPrivate: false,
       isComplete: false,
       description: '',
@@ -82,7 +76,7 @@ export const habitList: { [date: string]: HabitItem[] } = {
   '16': [],
   '17': [
     {
-      date: '2022년 07월 17일',
+      date: new Date(2022, 6, 17),
       isPrivate: false,
       isComplete: true,
       description: '',

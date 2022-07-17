@@ -72,47 +72,49 @@ const HabitPlusButtons = () => {
   }, [navigation]);
 
   return (
-    <View style={style.habitPlusButtonsContainer}>
-      <Animated.View
-        style={[
-          {
-            transform: [{ translateY: weekHabitTranslateY }],
-            opacity: weekHabitOpacity,
-          },
-        ]}>
-        <HabitPlusWithText
-          description="오늘 목표 추가"
-          backgroundColor="#AFA800"
-          onPress={() =>
-            navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
-              habitPlusOption: 'day',
-            })
-          }
-        />
-      </Animated.View>
-      <Animated.View
-        style={[
-          {
-            transform: [{ translateY: todayHabitTranslateY }],
-            opacity: todayHabitOpacity,
-          },
-        ]}>
-        <HabitPlusWithText
-          description="주간 목표 추가"
-          backgroundColor="#EDE636"
-          onPress={() =>
-            navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
-              habitPlusOption: 'week',
-            })
-          }
-        />
-      </Animated.View>
+    <View style={style.habitPlusButtonsBackground}>
+      <View style={style.habitPlusButtonsContainer}>
+        <Animated.View
+          style={[
+            {
+              transform: [{ translateY: weekHabitTranslateY }],
+              opacity: weekHabitOpacity,
+            },
+          ]}>
+          <HabitPlusWithText
+            description="오늘 목표 추가"
+            backgroundColor="#AFA800"
+            onPress={() =>
+              navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
+                habitPlusOption: 'day',
+              })
+            }
+          />
+        </Animated.View>
+        <Animated.View
+          style={[
+            {
+              transform: [{ translateY: todayHabitTranslateY }],
+              opacity: todayHabitOpacity,
+            },
+          ]}>
+          <HabitPlusWithText
+            description="주간 목표 추가"
+            backgroundColor="#EDE636"
+            onPress={() =>
+              navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
+                habitPlusOption: 'week',
+              })
+            }
+          />
+        </Animated.View>
 
-      <View style={style.habitPlusButton}>
-        <HabitPlus
-          backgroundColor="#FCF664"
-          onPress={handleHabitPlusButtonClick}
-        />
+        <View style={style.habitPlusButton}>
+          <HabitPlus
+            backgroundColor="#FCF664"
+            onPress={handleHabitPlusButtonClick}
+          />
+        </View>
       </View>
     </View>
   );

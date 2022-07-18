@@ -34,6 +34,7 @@ const HabitList = () => {
             {...habitItemInfo}
             key={habitItemInfo.title}
             onPress={() => handleHabitItemClick(habitItemInfo)}
+            onPressCompleteIcon={() => console.log('complete button click')}
           />
         ))
       )}

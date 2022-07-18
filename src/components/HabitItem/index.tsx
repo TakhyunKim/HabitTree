@@ -6,7 +6,12 @@ import { WateringCan } from '../../assets';
 import { HabitItemProps } from './HabitItem.types';
 import { styles } from './HabitItem.styles';
 
-const HabitItem = ({ title, isComplete, onPress }: HabitItemProps) => {
+const HabitItem = ({
+  title,
+  isComplete,
+  onPress,
+  onPressCompleteIcon,
+}: HabitItemProps) => {
   const style = styles(isComplete);
 
   return (
@@ -15,9 +20,11 @@ const HabitItem = ({ title, isComplete, onPress }: HabitItemProps) => {
         <View style={style.habitItemIcon} />
         <Text style={style.habitItemTitle}>{title}</Text>
       </View>
-      <View style={style.habitItemWateringCanIcon}>
+      <TouchableOpacity
+        style={style.habitItemWateringCanIcon}
+        onPress={onPressCompleteIcon}>
         <WateringCan fill="#000000" width={25} height={25} />
-      </View>
+      </TouchableOpacity>
     </TouchableOpacity>
   );
 };

@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { View, Animated } from 'react-native';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
+import {
+  useFocusEffect,
+  useNavigation,
+  NavigationProp,
+} from '@react-navigation/native';
 
 import { HabitPlus, HabitPlusWithText } from '../../components';
 
@@ -67,9 +71,11 @@ const HabitPlusButtons = () => {
     setIsActiveOfPlus(prevState => !prevState);
   };
 
-  useEffect(() => {
-    return navigation.addListener('focus', () => setIsActiveOfPlus(false));
-  }, [navigation]);
+  useFocusEffect(
+    useCallback(() => {
+      setIsActiveOfPlus(false);
+    }, []),
+  );
 
   return (
     <View style={style.habitPlusButtonsBackground}>

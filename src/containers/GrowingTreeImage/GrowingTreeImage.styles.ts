@@ -13,6 +13,12 @@ export const styles = StyleSheet.create({
     bottom: '30%',
     zIndex: -10,
   },
+  waterCanAnimatedElement: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#8FC6F8',
+  },
   waterIconWrapper: {
     justifyContent: 'center',
     alignItems: 'center',

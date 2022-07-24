@@ -1,26 +1,14 @@
-import { DateInfo } from '../types';
+import { startOfWeek } from 'date-fns';
 
-const getWeek = (): DateInfo => {
-  const today = new Date();
-  const first = today.getDate() - today.getDay() + 1;
+import { DAY_OF_THE_WEEK_LIST } from '../constants/day';
 
-  const monday = new Date(new Date().setDate(first));
-  const tuesday = new Date(new Date().setDate(first + 1));
-  const wednesday = new Date(new Date().setDate(first + 2));
-  const thursday = new Date(new Date().setDate(first + 3));
-  const friday = new Date(new Date().setDate(first + 4));
-  const saturday = new Date(new Date().setDate(first + 5));
-  const sunday = new Date(new Date().setDate(first + 6));
+type DayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
-  const dateInfo: DateInfo = {
-    월: monday,
-    화: tuesday,
-    수: wednesday,
-    목: thursday,
-    금: friday,
-    토: saturday,
-    일: sunday,
-  };
+const getWeek = (date: Date) => {
+  const dateInfo = DAY_OF_THE_WEEK_LIST.map((day, i) => {
+    const currentDayIndex = (day === '일' ? 0 : i + 1) as DayIndex;
+    return startOfWeek(date, { weekStartsOn: currentDayIndex });
+  });
 
   return dateInfo;
 };

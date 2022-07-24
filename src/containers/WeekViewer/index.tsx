@@ -6,7 +6,7 @@ import { DayViewer, YearAndMonth } from '../../components';
 
 import { habitDay } from '../../recoil/atoms';
 
-import { getWeek, isSameDate } from '../../utils';
+import { isSameDate, getWeek } from '../../utils';
 import { DAY_OF_THE_WEEK_LIST } from '../../constants/day';
 
 import { styles } from './WeekViewer.styles';
@@ -14,22 +14,26 @@ import { styles } from './WeekViewer.styles';
 const WeekViewer = () => {
   const [habitTargetDate, setHabitTargetDate] = useRecoilState(habitDay);
 
-  const weak = getWeek();
+  const week = getWeek(new Date());
 
   return (
     <View style={styles.WeekViewerContainer}>
       <View style={styles.WeekViewerChildrenContainer}>
         <YearAndMonth day={habitTargetDate} />
         <View style={styles.DayViewerWrapper}>
-          {DAY_OF_THE_WEEK_LIST.map(dayOfTheWeek => (
-            <DayViewer
-              key={dayOfTheWeek}
-              day={weak[dayOfTheWeek].getDate()}
-              dayOfTheWeek={dayOfTheWeek}
-              isTargetDay={isSameDate(habitTargetDate, weak[dayOfTheWeek])}
-              onPress={() => setHabitTargetDate(weak[dayOfTheWeek])}
-            />
-          ))}
+          {week.map((dayOfTheWeek, i) => {
+            const dayOfWeek = DAY_OF_THE_WEEK_LIST[i];
+
+            return (
+              <DayViewer
+                key={dayOfWeek}
+                day={dayOfTheWeek.getDate()}
+                dayOfTheWeek={DAY_OF_THE_WEEK_LIST[i]}
+                isTargetDay={isSameDate(habitTargetDate, dayOfTheWeek)}
+                onPress={() => setHabitTargetDate(dayOfTheWeek)}
+              />
+            );
+          })}
         </View>
       </View>
     </View>

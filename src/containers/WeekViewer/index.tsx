@@ -1,5 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import {
+  View,
+  Dimensions,
+  ScrollView,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+} from 'react-native';
 import { useRecoilState } from 'recoil';
 
 import { DayViewer, YearAndMonth } from '../../components';
@@ -14,13 +20,37 @@ import { styles } from './WeekViewer.styles';
 const WeekViewer = () => {
   const [habitTargetDate, setHabitTargetDate] = useRecoilState(habitDay);
 
+  const { width } = Dimensions.get('window');
+
+  const style = styles(width);
+
   const week = getWeek(new Date());
 
+  const handleWeekViewerChange = (
+    event: NativeSyntheticEvent<NativeScrollEvent>,
+  ) => {
+    const nextCurrent = Math.floor(
+      event.nativeEvent.contentOffset.x /
+        event.nativeEvent.layoutMeasurement.width,
+    );
+
+    return nextCurrent;
+  };
+
   return (
-    <View style={styles.WeekViewerContainer}>
-      <View style={styles.WeekViewerChildrenContainer}>
+    <View style={style.weekViewerContainer}>
+      <View style={style.yearAndMonthWrapper}>
         <YearAndMonth day={habitTargetDate} />
-        <View style={styles.DayViewerWrapper}>
+      </View>
+      <ScrollView
+        horizontal
+        pagingEnabled
+        decelerationRate="fast"
+        scrollEventThrottle={200}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={style.weekViewerScrollWrapper}
+        onScrollEndDrag={handleWeekViewerChange}>
+        <View style={style.dayViewerWrapper}>
           {week.map((dayOfTheWeek, i) => {
             const dayOfWeek = DAY_OF_THE_WEEK_LIST[i];
 
@@ -35,7 +65,22 @@ const WeekViewer = () => {
             );
           })}
         </View>
-      </View>
+        <View style={style.dayViewerWrapper}>
+          {week.map((dayOfTheWeek, i) => {
+            const dayOfWeek = DAY_OF_THE_WEEK_LIST[i];
+
+            return (
+              <DayViewer
+                key={dayOfWeek}
+                day={dayOfTheWeek.getDate()}
+                dayOfTheWeek={DAY_OF_THE_WEEK_LIST[i]}
+                isTargetDay={isSameDate(habitTargetDate, dayOfTheWeek)}
+                onPress={() => setHabitTargetDate(dayOfTheWeek)}
+              />
+            );
+          })}
+        </View>
+      </ScrollView>
     </View>
   );
 };

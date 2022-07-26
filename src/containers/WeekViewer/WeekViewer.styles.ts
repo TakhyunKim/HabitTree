@@ -14,7 +14,7 @@ export const styles = (width: number) =>
       width: '90%',
     },
     weekViewerScrollWrapper: {
-      width: '200%',
+      width: '300%',
     },
     dayViewerWrapper: {
       width,

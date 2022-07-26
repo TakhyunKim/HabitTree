@@ -7,6 +7,7 @@ import {
   NativeSyntheticEvent,
 } from 'react-native';
 import { useRecoilState } from 'recoil';
+import { addWeeks, subWeeks } from 'date-fns';
 
 import { DayViewer, YearAndMonth } from '../../components';
 
@@ -25,6 +26,8 @@ const WeekViewer = () => {
   const style = styles(width);
 
   const week = getWeek(new Date());
+  const preWeek = getWeek(subWeeks(new Date(), 1));
+  const nextWeek = getWeek(addWeeks(new Date(), 1));
 
   const handleWeekViewerChange = (
     event: NativeSyntheticEvent<NativeScrollEvent>,
@@ -51,7 +54,7 @@ const WeekViewer = () => {
         contentContainerStyle={style.weekViewerScrollWrapper}
         onScrollEndDrag={handleWeekViewerChange}>
         <View style={style.dayViewerWrapper}>
-          {week.map((dayOfTheWeek, i) => {
+          {preWeek.map((dayOfTheWeek, i) => {
             const dayOfWeek = DAY_OF_THE_WEEK_LIST[i];
 
             return (
@@ -67,6 +70,21 @@ const WeekViewer = () => {
         </View>
         <View style={style.dayViewerWrapper}>
           {week.map((dayOfTheWeek, i) => {
+            const dayOfWeek = DAY_OF_THE_WEEK_LIST[i];
+
+            return (
+              <DayViewer
+                key={dayOfWeek}
+                day={dayOfTheWeek.getDate()}
+                dayOfTheWeek={DAY_OF_THE_WEEK_LIST[i]}
+                isTargetDay={isSameDate(habitTargetDate, dayOfTheWeek)}
+                onPress={() => setHabitTargetDate(dayOfTheWeek)}
+              />
+            );
+          })}
+        </View>
+        <View style={style.dayViewerWrapper}>
+          {nextWeek.map((dayOfTheWeek, i) => {
             const dayOfWeek = DAY_OF_THE_WEEK_LIST[i];
 
             return (

@@ -4,6 +4,7 @@ import HabitList from './HabitList';
 import WeekViewer from './WeekViewer';
 import Statistics from './Statistics';
 import ScreenHeader from './ScreenHeader';
+import ProfileHeader from './ProfileHeader';
 import HabitComplete from './HabitComplete';
 import DayHabitSubmit from './DayHabitSubmit';
 import SocialProfiles from './SocialProfiles';
@@ -20,6 +21,7 @@ export {
   WeekViewer,
   Statistics,
   ScreenHeader,
+  ProfileHeader,
   HabitComplete,
   DayHabitSubmit,
   SocialProfiles,

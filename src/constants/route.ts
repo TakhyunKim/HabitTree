@@ -6,6 +6,7 @@ export const ROUTE_PATH = {
   MY_PAGE: 'myPage',
   SOCIAL: 'social',
   USER_STATISTICS: 'userStatistics',
+  PROFILE_EDIT: 'profileEdit',
 } as const;
 
 export const NAVIGATION_NAME = {

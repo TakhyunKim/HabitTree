@@ -22,7 +22,7 @@ export type BottomTabRoutePathValues = Exclude<
 
 export type StackRoutePathValues = Extract<
   RoutePathValuesType,
-  'habitPlus' | 'habitComplete'
+  'habitPlus' | 'habitComplete' | 'profileEdit'
 >;
 
 export type HabitPlusValue = Extract<RoutePathValuesType, 'habitPlus'>;

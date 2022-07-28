@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HabitPlus, HabitComplete } from '../../screens';
+import { HabitPlus, ProfileEdit, HabitComplete } from '../../screens';
 
 import { BottomTabNavigation } from '../';
 
@@ -23,6 +23,7 @@ const UserScreenNavigation = () => {
         />
         <Screen name={ROUTE_PATH.HABIT_PLUS} component={HabitPlus} />
         <Screen name={ROUTE_PATH.HABIT_COMPLETE} component={HabitComplete} />
+        <Screen name={ROUTE_PATH.PROFILE_EDIT} component={ProfileEdit} />
       </Navigator>
     </NavigationContainer>
   );

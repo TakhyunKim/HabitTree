@@ -3,8 +3,8 @@ import HabitAdd from './HabitAdd';
 import HabitList from './HabitList';
 import WeekViewer from './WeekViewer';
 import Statistics from './Statistics';
+import ProfileEdit from './ProfileEdit';
 import ScreenHeader from './ScreenHeader';
-import ProfileHeader from './ProfileHeader';
 import HabitComplete from './HabitComplete';
 import DayHabitSubmit from './DayHabitSubmit';
 import SocialProfiles from './SocialProfiles';
@@ -20,8 +20,8 @@ export {
   HabitList,
   WeekViewer,
   Statistics,
+  ProfileEdit,
   ScreenHeader,
-  ProfileHeader,
   HabitComplete,
   DayHabitSubmit,
   SocialProfiles,

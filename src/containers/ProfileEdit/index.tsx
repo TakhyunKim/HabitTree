@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import ProfileHeaderComponent from '../../components/ProfileHeader';
+import ProfileHeader from '../../components/ProfileHeader';
 
-import { styles } from './ProfileHeader.styles';
+import { styles } from './ProfileEdit.styles';
 
-const ProfileHeader = () => {
+const ProfileEdit = () => {
   const handleCancelClick = () => {
     console.log('cancel');
   };
@@ -16,7 +16,7 @@ const ProfileHeader = () => {
 
   return (
     <View style={styles.profileHeaderContainer}>
-      <ProfileHeaderComponent
+      <ProfileHeader
         onCancelClick={handleCancelClick}
         onCompleteClick={handleCompleteClick}
       />
@@ -24,4 +24,4 @@ const ProfileHeader = () => {
   );
 };
 
-export default ProfileHeader;
+export default ProfileEdit;

@@ -8,11 +8,14 @@ import EmptyHabit from './EmptyHabit';
 import ProgressBar from './ProgressBar';
 import ScreenHeader from './ScreenHeader';
 import YearAndMonth from './YearAndMonth';
+import ProfileHeader from './ProfileHeader';
 import WaterProgress from './WaterProgress';
 import SocialProfile from './SocialProfile';
 import SocialContents from './SocialContents';
 import StatisticsText from './StatisticsText';
 import HabitAddOption from './HabitAddOption';
+import ProfileTextInfo from './ProfileTextInfo';
+import ProfileImageEdit from './ProfileImageEdit';
 import StatisticsResult from './StatisticsResult';
 import WaterCanWithText from './WaterCanWithText';
 import HabitPlusWithText from './HabitPlusWithText';
@@ -35,11 +38,14 @@ export {
   ProgressBar,
   ScreenHeader,
   YearAndMonth,
+  ProfileHeader,
   WaterProgress,
   SocialProfile,
   SocialContents,
   StatisticsText,
   HabitAddOption,
+  ProfileTextInfo,
+  ProfileImageEdit,
   StatisticsResult,
   WaterCanWithText,
   HabitPlusWithText,

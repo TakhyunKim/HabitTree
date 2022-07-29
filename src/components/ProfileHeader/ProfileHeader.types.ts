@@ -1,4 +1,4 @@
 export interface ProfileHeaderProps {
-  onCancelClick: () => void;
-  onCompleteClick: () => void;
+  onCancelPress: () => void;
+  onCompletePress: () => void;
 }

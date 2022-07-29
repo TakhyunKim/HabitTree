@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable, Button } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 import { ProfileHeaderProps } from './ProfileHeader.types';
 import { styles } from './ProfileHeader.styles';
@@ -14,7 +14,9 @@ const ProfileHeader = ({
         <Text style={styles.cancelText}>취소</Text>
       </Pressable>
       <Text style={styles.profileTitleText}>프로필 수정</Text>
-      <Button title="완료" onPress={onCompleteClick} />
+      <Pressable onPress={onCompleteClick}>
+        <Text style={styles.completeText}>완료</Text>
+      </Pressable>
     </View>
   );
 };

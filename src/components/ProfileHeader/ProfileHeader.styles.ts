@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   profileHeaderContainer: {
     width: '100%',
     height: '100%',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     borderBottomColor: 'rgba(65, 65, 65, 0.1)',
@@ -12,6 +13,7 @@ export const styles = StyleSheet.create({
   profileTitleText: {
     color: '#414141',
     fontWeight: 'bold',
+    fontSize: 15,
   },
   cancelText: {
     color: '#414141',

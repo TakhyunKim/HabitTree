@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 
-import { PlusIcon } from '../../assets';
+import { PlusIcon } from '@assets';
 
 import { HabitPlusProps } from './HabitPlus.types';
 import { styles } from './HabitPlus.styles';

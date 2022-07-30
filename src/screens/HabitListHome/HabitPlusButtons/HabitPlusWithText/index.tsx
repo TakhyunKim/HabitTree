@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { HabitPlus } from '../';
+import HabitPlus from '../HabitPlus';
 
 import { HabitPlusWithTextProps } from './HabitPlusWithText.types';
 import { styles } from './HabitPlusWithText.styles';

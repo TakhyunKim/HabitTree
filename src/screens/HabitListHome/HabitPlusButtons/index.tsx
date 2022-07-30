@@ -6,12 +6,13 @@ import {
   NavigationProp,
 } from '@react-navigation/native';
 
-import { HabitPlus, HabitPlusWithText } from '../../components';
+import HabitPlus from './HabitPlus';
+import HabitPlusWithText from './HabitPlusWithText';
 
-import { useFlagAnimation } from '../../hooks';
-import { getAnimationMultiStyle } from '../../utils';
-import { AnimationStyleInfo, HabitPlusParams } from '../../types';
-import { ROUTE_PATH } from '../../constants/route';
+import { useFlagAnimation } from '@hooks';
+import { getAnimationMultiStyle } from '@utils';
+import { AnimationStyleInfo, HabitPlusParams } from '@types';
+import { ROUTE_PATH } from '@constants/route';
 
 import { styles } from './HabitPlusButtons.styles';
 

@@ -1,4 +1,4 @@
-import { Week } from '../../types';
+import { Week } from '@types';
 
 export interface DayViewerProps {
   day: number;

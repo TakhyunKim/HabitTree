@@ -9,12 +9,13 @@ import {
 import { useRecoilState } from 'recoil';
 import { addWeeks, subWeeks } from 'date-fns';
 
-import { DayViewer, YearAndMonth } from '../../components';
+import DayViewer from './DayViewer';
+import YearAndMonth from './YearAndMonth';
 
-import { habitDay } from '../../recoil/atoms';
+import { habitDay } from '../../../recoil/atoms';
 
-import { isSameDate, getWeek } from '../../utils';
-import { DAY_OF_THE_WEEK_LIST } from '../../constants/day';
+import { isSameDate, getWeek } from '../../../utils';
+import { DAY_OF_THE_WEEK_LIST } from '../../../constants/day';
 
 import { styles } from './WeekViewer.styles';
 

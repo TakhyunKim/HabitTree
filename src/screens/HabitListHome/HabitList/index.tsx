@@ -3,11 +3,12 @@ import { View } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { useRecoilValue } from 'recoil';
 
-import { HabitItem, EmptyHabit } from '../../components';
+import HabitItem from './HabitItem';
+import EmptyHabit from './EmptyHabit';
 
-import { HabitItem as HabitItemType, HabitCompleteParams } from '../../types';
+import { HabitItem as HabitItemType, HabitCompleteParams } from '@types';
 
-import { filteredHabitListState } from '../../recoil/selectors';
+import { filteredHabitListState } from '@recoil/selectors';
 
 import { styles } from './HabitList.styles';
 

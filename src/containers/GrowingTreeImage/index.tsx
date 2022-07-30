@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { View, Animated, PanResponder, TouchableOpacity } from 'react-native';
+import React, { useRef } from 'react';
+import { View, Animated, PanResponder } from 'react-native';
 
 import {
   LandIcon,
@@ -12,9 +12,6 @@ import {
 import { styles } from './GrowingTreeImage.styles';
 
 const GrowingTreeImage = () => {
-  const [isWateringCanActive, setIsWateringCanActive] =
-    useState<boolean>(false);
-
   const pan = useRef(new Animated.ValueXY()).current;
 
   const panResponder = useRef(
@@ -32,10 +29,6 @@ const GrowingTreeImage = () => {
     }),
   ).current;
 
-  const handleWWateringCanClick = () => {
-    setIsWateringCanActive(prevState => !prevState);
-  };
-
   return (
     <View style={styles.growingTreeImageContainer}>
       <TeaLeatIcon style={styles.teaLeatIcon} width={40} height={40} />
@@ -43,11 +36,9 @@ const GrowingTreeImage = () => {
       <CloudIcon style={styles.cloudIcon} width="30%" height="30%" />
       <CloudsIcon style={styles.cloudsIcon} width="30%" height="30%" />
       <Animated.View {...panResponder.panHandlers} style={[pan.getLayout()]}>
-        <TouchableOpacity
-          style={styles.waterIconWrapper}
-          onPress={handleWWateringCanClick}>
+        <View style={styles.waterIconWrapper}>
           <WateringCan width={30} height={30} fill="#000000" />
-        </TouchableOpacity>
+        </View>
       </Animated.View>
     </View>
   );

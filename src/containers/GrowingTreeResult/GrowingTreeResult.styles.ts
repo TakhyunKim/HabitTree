@@ -5,5 +5,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '90%',
+    height: '70%',
+    position: 'absolute',
   },
 });

@@ -13,16 +13,22 @@ export const styles = StyleSheet.create({
     bottom: '30%',
     zIndex: -10,
   },
+  waterCanAnimatedElement: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#8FC6F8',
+  },
+  waterCanAnimatedViewWapper: {
+    width: '100%',
+  },
   waterIconWrapper: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: 40,
-    height: 40,
     borderRadius: 50,
-    backgroundColor: '#8FC6F8',
     position: 'absolute',
-    bottom: 150,
-    right: 20,
+    bottom: 30,
+    right: 15,
   },
   landIcon: {
     osition: 'absolute',

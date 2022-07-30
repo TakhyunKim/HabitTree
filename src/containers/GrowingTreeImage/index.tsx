@@ -6,7 +6,7 @@ import {
   CloudIcon,
   CloudsIcon,
   TeaLeatIcon,
-  WateringCan,
+  WaterColorCan,
 } from '../../assets';
 
 import { styles } from './GrowingTreeImage.styles';
@@ -35,9 +35,11 @@ const GrowingTreeImage = () => {
       <LandIcon style={styles.landIcon} width="120%" height="100%" />
       <CloudIcon style={styles.cloudIcon} width="30%" height="30%" />
       <CloudsIcon style={styles.cloudsIcon} width="30%" height="30%" />
-      <Animated.View {...panResponder.panHandlers} style={[pan.getLayout()]}>
+      <Animated.View
+        {...panResponder.panHandlers}
+        style={[pan.getLayout(), styles.waterCanAnimatedViewWapper]}>
         <View style={styles.waterIconWrapper}>
-          <WateringCan width={30} height={30} fill="#000000" />
+          <WaterColorCan width={60} height={60} />
         </View>
       </Animated.View>
     </View>

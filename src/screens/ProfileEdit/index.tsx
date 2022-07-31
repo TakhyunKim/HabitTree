@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { ProfileEdit as ProfileEditContainer } from '../../containers';
+import ProfileEditContainer from './ProfileEditContainer';
 
 import { ScreenContainer } from '../';
 

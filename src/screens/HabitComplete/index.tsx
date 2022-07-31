@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
 import {
   ScreenHeader,
   HabitComplete as HabitCompleteContainer,
   HabitCompleteSubmit,
-} from '../../containers';
+} from '@containers';
 
 import { HabitCompleteProp } from './HabitComplete.types';
 

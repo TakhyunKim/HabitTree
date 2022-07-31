@@ -1,8 +1,11 @@
 import React from 'react';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
-import { ScreenHeader, HabitAdd, DayHabitSubmit } from '../../containers';
+import { ScreenHeader } from '@containers';
+
+import HabitAdd from './HabitAdd';
+import DayHabitSubmit from './DayHabitSubmit';
 
 import { HabitPlusProp } from './HabitPlus.types';
 

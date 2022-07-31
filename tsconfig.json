@@ -98,28 +98,29 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
+      "~/*": ["./*"],
       "@components": [
-        "src/components",
+        "components",
       ],
       "@types": [
-        "src/types",
-      ],
-      "@hooks": [
-        "src/hooks",
+        "types",
       ],
       "@assets": [
-        "src/assets",
+        "assets",
       ],
       "@utils": [
-        "src/utils",
+        "utils",
+      ],
+      "@hooks/*": [
+        "hooks/*",
       ],
       "@recoil/*": [
-        "src/recoil/*",
+        "recoil/*"
       ],
       "@constants/*": [
-        "src/constants/*"
+        "constants/*"
       ]
     }
   },

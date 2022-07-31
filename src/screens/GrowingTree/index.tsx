@@ -1,9 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
-import { GrowingTreeResult, GrowingTreeImage } from '../../containers';
+import GrowingTreeImage from './GrowingTreeImage';
+import GrowingTreeResult from './GrowingTreeResult';
 
 import { styles } from './GrowingTress.styles';
 

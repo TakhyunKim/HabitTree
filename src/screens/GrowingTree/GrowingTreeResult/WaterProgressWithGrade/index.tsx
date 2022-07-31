@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { TeaLeatIcon } from '../../assets/';
+import { TeaLeatIcon } from '@assets';
 
-import { WaterProgress } from '../';
+import WaterProgress from './WaterProgress';
 
 import { WaterProgressWithGradeProps } from './WaterProgressWithGrade.types';
 import { styles } from './WaterProgressWithGrade.styles';

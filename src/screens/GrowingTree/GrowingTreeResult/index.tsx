@@ -1,10 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import {
-  WaterProgressWithGrade,
-  GrowingTreeResultText,
-} from '../../components';
+import GrowingTreeResultText from './GrowingTreeResultText';
+import WaterProgressWithGrade from './WaterProgressWithGrade';
 
 import { styles } from './GrowingTreeResult.styles';
 

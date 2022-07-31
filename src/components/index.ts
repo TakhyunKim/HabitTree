@@ -4,7 +4,6 @@ import TextInput from './TextInput';
 import ProgressBar from './ProgressBar';
 import ScreenHeader from './ScreenHeader';
 import ProfileHeader from './ProfileHeader';
-import WaterProgress from './WaterProgress';
 import SocialProfile from './SocialProfile';
 import HabitAddOption from './HabitAddOption';
 import SocialContents from './SocialContents';
@@ -15,8 +14,6 @@ import StatisticsResult from './StatisticsResult';
 import WaterCanWithText from './WaterCanWithText';
 import WhiteBoxWithSubTitle from './WhiteBoxWithSubTitle';
 import HabitPlusSubmitButton from './HabitPlusSubmitButton';
-import GrowingTreeResultText from './GrowingTreeResultText';
-import WaterProgressWithGrade from './WaterProgressWithGrade';
 import SocialProfileWIthGrade from './SocialProfileWIthGrade';
 import PortraitModeProgressBar from './PortraitModeProgressBar';
 import PortraitModeProgressBarList from './PortraitModeProgressBarList';
@@ -28,7 +25,6 @@ export {
   ProgressBar,
   ScreenHeader,
   ProfileHeader,
-  WaterProgress,
   SocialProfile,
   HabitAddOption,
   SocialContents,
@@ -39,8 +35,6 @@ export {
   WaterCanWithText,
   WhiteBoxWithSubTitle,
   HabitPlusSubmitButton,
-  GrowingTreeResultText,
-  WaterProgressWithGrade,
   SocialProfileWIthGrade,
   PortraitModeProgressBar,
   PortraitModeProgressBarList,

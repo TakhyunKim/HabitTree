@@ -7,7 +7,7 @@ import {
   CloudsIcon,
   TeaLeatIcon,
   WaterColorCan,
-} from '../../assets';
+} from '@assets';
 
 import { styles } from './GrowingTreeImage.styles';
 

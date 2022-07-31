@@ -2,15 +2,10 @@ import React, { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { View, Text } from 'react-native';
 
-import {
-  TextInput,
-  HabitAddOption,
-  WhiteBoxWithSubTitle,
-} from '../../components';
+import { TextInput, HabitAddOption, WhiteBoxWithSubTitle } from '@components';
 
-import { getKoreaDate } from '../../utils';
-
-import { habitDay } from '../../recoil/atoms';
+import { getKoreaDate } from '@utils';
+import { habitDay } from '@recoil/atoms';
 
 import { HabitAddProps } from './HabitAdd.types';
 import { styles } from './HabitAdd.styles';

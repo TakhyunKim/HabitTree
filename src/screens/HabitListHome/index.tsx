@@ -4,7 +4,7 @@ import HabitList from './HabitList';
 import WeekViewer from './WeekViewer';
 import HabitPlusButtons from './HabitPlusButtons';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
 const HabitListHome = () => {
   return (

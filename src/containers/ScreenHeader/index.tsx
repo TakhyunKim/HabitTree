@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ScreenHeader as ScreenHeaderComponent } from '../../components';
+import { ScreenHeader as ScreenHeaderComponent } from '@components';
 
 import { ScreenHeaderProps } from './ScreenHeader.types';
 

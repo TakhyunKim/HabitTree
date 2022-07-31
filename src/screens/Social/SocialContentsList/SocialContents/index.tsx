@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { SocialProfileWIthGrade } from '../';
+import SocialProfileWIthGrade from '../SocialProfileWIthGrade';
 
 import { SocialContentsProps } from './SocialContents.types';
 import { styles } from './SocialContents.styles';

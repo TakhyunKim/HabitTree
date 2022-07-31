@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { TeaLeatIcon } from '../../assets';
+import { TeaLeatIcon } from '@assets';
 
 import { SocialProfileWIthGradeProps } from './SocialProfileWIthGrade.types';
 import { styles } from './SocialProfileWIthGrade.styles';

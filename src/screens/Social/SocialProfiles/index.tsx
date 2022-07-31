@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { SocialProfile } from '../../components';
+import SocialProfile from './SocialProfile';
 
 import { styles } from './SocialProfiles.styles';
 

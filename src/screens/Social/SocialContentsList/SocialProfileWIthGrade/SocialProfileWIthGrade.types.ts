@@ -1,4 +1,4 @@
-import { PlantGrade } from '../../types';
+import { PlantGrade } from '@types';
 
 export interface SocialProfileWIthGradeProps {
   userName: string;

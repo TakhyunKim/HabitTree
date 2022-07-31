@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { SocialContents } from '../../components';
+import SocialContents from './SocialContents';
 
 import { styles } from './SocialContentsList.styles';
 

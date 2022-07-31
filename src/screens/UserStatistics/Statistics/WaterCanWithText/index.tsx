@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { WateringCan } from '../../assets';
+import { WateringCan } from '@assets';
 
 import { WaterCanWithTextProps } from './WaterCanWithText.types';
 import { styles } from './WaterCanWithText.styles';

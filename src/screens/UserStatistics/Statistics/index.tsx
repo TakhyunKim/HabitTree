@@ -1,14 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import {
-  ProgressBar,
-  StatisticsText,
-  StatisticsResult,
-  WaterCanWithText,
-  WhiteBoxWithSubTitle,
-  PortraitModeProgressBarList,
-} from '../../components';
+import { WhiteBoxWithSubTitle } from '@components';
+
+import ProgressBar from './ProgressBar';
+import StatisticsText from './StatisticsText';
+import WaterCanWithText from './WaterCanWithText';
+import StatisticsResult from './StatisticsResult';
+import PortraitModeProgressBarList from './PortraitModeProgressBarList';
 
 import { styles } from './Statistics.styles';
 

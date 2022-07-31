@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { PortraitModeProgressBar } from '../';
+import PortraitModeProgressBar from '../PortraitModeProgressBar';
 
-import { DAY_OF_THE_WEEK_LIST } from '../../constants/day';
+import { DAY_OF_THE_WEEK_LIST } from '@constants/day';
 
 import { PortraitModeProgressBarListProps } from './PortraitModeProgressBarList.types';
 import { styles } from './PortraitModeProgressBarList.styles';

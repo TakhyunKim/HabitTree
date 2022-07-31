@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
-import { Statistics } from '../../containers';
+import Statistics from './Statistics';
 
 import { styles } from './UserStatistics.styles';
 

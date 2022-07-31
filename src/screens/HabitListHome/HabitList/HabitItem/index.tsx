@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
-import { WateringCan } from '../../../../assets';
+import { WateringCan } from '@assets';
 
 import { HabitItemProps } from './HabitItem.types';
 import { styles } from './HabitItem.styles';

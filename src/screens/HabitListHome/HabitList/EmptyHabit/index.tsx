@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { PlusIcon, EmptyPackageIcon } from '../../../../assets';
+import { PlusIcon, EmptyPackageIcon } from '@assets';
 
 import { styles } from './EmptyHabit.styles';
 

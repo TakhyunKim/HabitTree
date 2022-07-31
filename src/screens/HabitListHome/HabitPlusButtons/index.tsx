@@ -9,7 +9,7 @@ import {
 import HabitPlus from './HabitPlus';
 import HabitPlusWithText from './HabitPlusWithText';
 
-import { useFlagAnimation } from '@hooks';
+import useFlagAnimation from '@hooks/useFlagAnimation';
 import { getAnimationMultiStyle } from '@utils';
 import { AnimationStyleInfo, HabitPlusParams } from '@types';
 import { ROUTE_PATH } from '@constants/route';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HabitPlusSubmitButton } from '../../components';
+import { HabitPlusSubmitButton } from '@components';
 
 const HabitCompleteSubmit = () => {
   return (

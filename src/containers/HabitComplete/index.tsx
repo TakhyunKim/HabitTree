@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 
-import {
-  TextInput,
-  HabitAddOption,
-  WhiteBoxWithSubTitle,
-} from '../../components';
+import { TextInput, HabitAddOption, WhiteBoxWithSubTitle } from '@components';
 
-import { getKoreaDate } from '../../utils';
+import { getKoreaDate } from '@utils';
 
 import { HabitCompleteProps } from './HabitComplete.types';
 import { styles } from './HabitComplete.styles';

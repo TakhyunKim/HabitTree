@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { Profile, Button } from '../../components';
+import { Profile, Button } from '@components';
 
 import { styles } from './UserInfo.styles';
 

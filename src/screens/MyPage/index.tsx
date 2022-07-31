@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { UserInfo } from '../../containers';
+import UserInfo from './UserInfo';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
 const MyPage = () => {
   return (

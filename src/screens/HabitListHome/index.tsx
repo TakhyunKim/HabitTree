@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { HabitList, WeekViewer, HabitPlusButtons } from '../../containers';
+import HabitList from './HabitList';
+import WeekViewer from './WeekViewer';
+import HabitPlusButtons from './HabitPlusButtons';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
 const HabitListHome = () => {
   return (

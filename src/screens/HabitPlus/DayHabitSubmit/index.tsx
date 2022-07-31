@@ -2,13 +2,13 @@ import React from 'react';
 
 import { HabitPlusSubmitButton } from '@components';
 
-const HabitCompleteSubmit = () => {
+const DayHabitSubmit = () => {
   return (
     <HabitPlusSubmitButton
-      buttonTitle="목표 완료하기"
+      buttonTitle="목표 시작하기"
       onPress={() => console.log('목표 제출')}
     />
   );
 };
 
-export default HabitCompleteSubmit;
+export default DayHabitSubmit;

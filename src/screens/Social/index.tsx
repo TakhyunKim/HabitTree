@@ -1,9 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { SocialProfiles, SocialContentsList } from '../../containers';
+import SocialProfiles from './SocialProfiles';
+import SocialContentsList from './SocialContentsList';
 
-import { ScreenContainer } from '../';
+import { ScreenContainer } from '@screens';
 
 const Social = () => {
   return (

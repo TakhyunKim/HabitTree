@@ -4,9 +4,9 @@
 
 - 목적 :
 
-- 프로덕트 기획서:
+- 프로덕트 기획서: [기획서](https://spangled-flyaway-82b.notion.site/7cd6ef9724134388969b0263ba0deb81)
 
-- Figma :
+- Figma : [figma](https://www.figma.com/file/ThUARfHpnpXxEtRGakkK2M/%EB%AA%A9%ED%91%9C-%EC%A7%80%ED%96%A5%EC%A0%81%EC%9D%B8-%EC%82%B6%EC%9D%84-%EA%BF%88%EA%BE%BC%EB%8B%A4?node-id=0%3A1)
 
 - 기타 참고 문서 :
 

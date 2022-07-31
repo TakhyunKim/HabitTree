@@ -10,6 +10,7 @@ import TeaLeatIcon from './tea-leaf.svg';
 import AnalyticsIcon from './analytics.svg';
 import WateringCan from './watering-can.svg';
 import EmptyPackageIcon from './empty-package.svg';
+import WaterColorCan from './watering-can-color.svg';
 import WateringFillCan from './watering-can-fill.svg';
 
 export {
@@ -23,6 +24,7 @@ export {
   SocialIcon,
   TeaLeatIcon,
   WateringCan,
+  WaterColorCan,
   AnalyticsIcon,
   WateringFillCan,
   EmptyPackageIcon,

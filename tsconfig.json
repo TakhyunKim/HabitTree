@@ -104,6 +104,12 @@
       "@components": [
         "components",
       ],
+      "@containers": [
+        "containers",
+      ],
+      "@screens": [
+        "screens",
+      ],
       "@types": [
         "types",
       ],

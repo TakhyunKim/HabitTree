@@ -3,13 +3,10 @@ import Profile from './Profile';
 import TextInput from './TextInput';
 import ProgressBar from './ProgressBar';
 import ScreenHeader from './ScreenHeader';
-import ProfileHeader from './ProfileHeader';
 import SocialProfile from './SocialProfile';
 import HabitAddOption from './HabitAddOption';
 import SocialContents from './SocialContents';
 import StatisticsText from './StatisticsText';
-import ProfileTextInfo from './ProfileTextInfo';
-import ProfileImageEdit from './ProfileImageEdit';
 import StatisticsResult from './StatisticsResult';
 import WaterCanWithText from './WaterCanWithText';
 import WhiteBoxWithSubTitle from './WhiteBoxWithSubTitle';
@@ -24,13 +21,10 @@ export {
   TextInput,
   ProgressBar,
   ScreenHeader,
-  ProfileHeader,
   SocialProfile,
   HabitAddOption,
   SocialContents,
   StatisticsText,
-  ProfileTextInfo,
-  ProfileImageEdit,
   StatisticsResult,
   WaterCanWithText,
   WhiteBoxWithSubTitle,

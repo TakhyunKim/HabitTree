@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
 
-import {
-  ProfileHeader,
-  ProfileImageEdit,
-  ProfileTextInfo,
-} from '../../components';
+import ProfileHeader from './ProfileHeader';
+import ProfileTextInfo from './ProfileTextInfo';
+import ProfileImageEdit from './ProfileImageEdit';
 
 import { styles } from './ProfileEdit.styles';
 

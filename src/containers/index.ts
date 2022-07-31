@@ -1,5 +1,4 @@
 import Statistics from './Statistics';
-import ProfileEdit from './ProfileEdit';
 import ScreenHeader from './ScreenHeader';
 import HabitComplete from './HabitComplete';
 import SocialProfiles from './SocialProfiles';
@@ -8,7 +7,6 @@ import HabitCompleteSubmit from './HabitCompleteSubmit';
 
 export {
   Statistics,
-  ProfileEdit,
   ScreenHeader,
   HabitComplete,
   SocialProfiles,

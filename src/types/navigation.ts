@@ -2,9 +2,9 @@ import { CompositeScreenProps } from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
-import { ROUTE_PATH, NAVIGATION_NAME } from '../constants/route';
+import { ROUTE_PATH, NAVIGATION_NAME } from '@constants/route';
 
-export type HabitPlusOption = 'week' | 'day';
+import { HabitPlusOption } from '@types';
 
 export type RoutePathKeysType = keyof typeof ROUTE_PATH;
 

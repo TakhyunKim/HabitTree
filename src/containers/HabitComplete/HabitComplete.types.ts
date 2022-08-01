@@ -1,6 +1,6 @@
 export interface HabitCompleteProps {
   date: Date;
-  habitTitle: string;
+  title: string;
   isPrivate: boolean;
   mainImage?: string;
   description?: string;

@@ -10,12 +10,12 @@ import { styles } from './HabitComplete.styles';
 
 const HabitComplete = ({
   date,
-  habitTitle,
+  title,
   isPrivate,
   mainImage,
   description,
 }: HabitCompleteProps) => {
-  const [text, setText] = useState<string>(habitTitle);
+  const [text, setText] = useState<string>(title);
   const [certiImage] = useState<string | null>(null);
 
   return (

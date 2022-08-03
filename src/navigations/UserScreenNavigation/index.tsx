@@ -2,16 +2,14 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HabitPlus, ProfileEdit, HabitComplete } from '../../screens';
+import { HabitPlus, ProfileEdit, HabitComplete } from '@screens';
 
 import { BottomTabNavigation } from '../';
 
-import { ROUTE_PATH, NAVIGATION_NAME } from '../../constants/route';
-import { StackParams, NavigationParams } from '../../types';
+import { ROUTE_PATH, NAVIGATION_NAME } from '@constants/route';
+import { RootStackParamList } from '@types';
 
-const { Screen, Navigator } = createStackNavigator<
-  StackParams & NavigationParams
->();
+const { Screen, Navigator } = createStackNavigator<RootStackParamList>();
 
 const UserScreenNavigation = () => {
   return (

@@ -1,3 +1,5 @@
+export type HabitPlusOption = 'week' | 'day';
+
 export interface HabitItem {
   date: Date;
   isPrivate: boolean;

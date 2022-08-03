@@ -15,10 +15,10 @@ import {
   GrowingTree,
   HabitListHome,
   UserStatistics,
-} from '../../screens';
+} from '@screens';
 
-import { ROUTE_PATH, BOTTOM_TAB_NAVIGATION_NAME } from '../../constants/route';
-import { BottomTabParams } from '../../types';
+import { ROUTE_PATH, BOTTOM_TAB_NAVIGATION_NAME } from '@constants/route';
+import { BottomTabNavigationParamList } from '@types';
 
 import {
   HomeIcon,
@@ -26,7 +26,7 @@ import {
   UserIcon,
   SocialIcon,
   AnalyticsIcon,
-} from '../../assets';
+} from '@assets';
 
 interface CustomTabBarButtonProps {
   children: ReactNode;
@@ -60,7 +60,8 @@ const CustomTabBarButton = ({ children, onPress }: CustomTabBarButtonProps) => (
   </TouchableOpacity>
 );
 
-const { Screen, Navigator } = createBottomTabNavigator<BottomTabParams>();
+const { Screen, Navigator } =
+  createBottomTabNavigator<BottomTabNavigationParamList>();
 
 const BottomTabNavigation = () => {
   return (

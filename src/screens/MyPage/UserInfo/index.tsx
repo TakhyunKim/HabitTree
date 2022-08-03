@@ -4,10 +4,12 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Profile, Button } from '@components';
 
+import { NavigationProp } from '@types';
+
 import { styles } from './UserInfo.styles';
 
 const UserInfo = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp>();
 
   const handleHabitItemClick = () => {
     navigation.navigate('profileEdit');

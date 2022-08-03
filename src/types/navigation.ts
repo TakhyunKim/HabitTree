@@ -1,4 +1,5 @@
 import { ROUTE_PATH, NAVIGATION_NAME } from '@constants/route';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 import { HabitPlusOption } from '@types';
 
@@ -28,3 +29,5 @@ export type BottomTabNavigationParamList = {
   [ROUTE_PATH.SOCIAL]: undefined;
   [ROUTE_PATH.MY_PAGE]: undefined;
 };
+
+export type NavigationProp = StackNavigationProp<RootStackParamList>;

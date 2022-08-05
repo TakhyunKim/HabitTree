@@ -2,13 +2,12 @@ import React from 'react';
 
 import { ScreenContainer } from '@screens';
 
-import {
-  ScreenHeader,
-  HabitComplete as HabitCompleteContainer,
-  HabitCompleteSubmit,
-} from '@containers';
+import { ScreenHeader } from '@containers';
 
 import { HabitCompleteProp } from './HabitComplete.types';
+
+import HabitCompleteSubmit from './HabitCompleteSubmit';
+import HabitCompleteContainer from './HabitCompleteContainer';
 
 const HabitComplete = ({ route }: HabitCompleteProp) => {
   return (

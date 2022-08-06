@@ -1,17 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import { View, Animated } from 'react-native';
-import {
-  useFocusEffect,
-  useNavigation,
-  NavigationProp,
-} from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 import HabitPlus from './HabitPlus';
 import HabitPlusWithText from './HabitPlusWithText';
 
 import useFlagAnimation from '@hooks/useFlagAnimation';
 import { getAnimationMultiStyle } from '@utils';
-import { AnimationStyleInfo, HabitPlusParams } from '@types';
+import { AnimationStyleInfo, HabitPlusOption, NavigationProp } from '@types';
 import { ROUTE_PATH } from '@constants/route';
 
 import { styles } from './HabitPlusButtons.styles';
@@ -19,7 +15,7 @@ import { styles } from './HabitPlusButtons.styles';
 const HabitPlusButtons = () => {
   const [isActiveOfPlus, setIsActiveOfPlus] = useState<boolean>(false);
 
-  const navigation = useNavigation<NavigationProp<HabitPlusParams>>();
+  const navigation = useNavigation<NavigationProp>();
 
   const style = styles(isActiveOfPlus);
 
@@ -72,6 +68,12 @@ const HabitPlusButtons = () => {
     setIsActiveOfPlus(prevState => !prevState);
   };
 
+  const handleAddHabitButton = (habitPlusOption: HabitPlusOption) => {
+    navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
+      habitPlusOption,
+    });
+  };
+
   useFocusEffect(
     useCallback(() => {
       setIsActiveOfPlus(false);
@@ -91,11 +93,7 @@ const HabitPlusButtons = () => {
           <HabitPlusWithText
             description="오늘 목표 추가"
             backgroundColor="#AFA800"
-            onPress={() =>
-              navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
-                habitPlusOption: 'day',
-              })
-            }
+            onPress={() => handleAddHabitButton('day')}
           />
         </Animated.View>
         <Animated.View
@@ -108,11 +106,7 @@ const HabitPlusButtons = () => {
           <HabitPlusWithText
             description="주간 목표 추가"
             backgroundColor="#EDE636"
-            onPress={() =>
-              navigation.navigate(ROUTE_PATH.HABIT_PLUS, {
-                habitPlusOption: 'week',
-              })
-            }
+            onPress={() => handleAddHabitButton('week')}
           />
         </Animated.View>
 

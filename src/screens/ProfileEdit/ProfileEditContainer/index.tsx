@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
+import { useNavigation, StackActions } from '@react-navigation/native';
 
 import ProfileHeader from './ProfileHeader';
 import ProfileTextInfo from './ProfileTextInfo';
 import ProfileImageEdit from './ProfileImageEdit';
+
+import { NavigationProp } from '@types';
 
 import { styles } from './ProfileEdit.styles';
 
@@ -11,12 +14,18 @@ const ProfileEdit = () => {
   const [name, setName] = useState<string>('김탁현');
   const [introduce, setIntroduce] = useState<string>('저는 잠을 좋아합니다');
 
+  const navigation = useNavigation<NavigationProp>();
+
   const handleCancelPress = () => {
-    console.log('cancel');
+    const popAction = StackActions.pop();
+
+    navigation.dispatch(popAction);
   };
 
   const handleCompletePress = () => {
-    console.log('complete');
+    const popAction = StackActions.pop();
+
+    navigation.dispatch(popAction);
   };
 
   const handleProfileEditPress = () => {

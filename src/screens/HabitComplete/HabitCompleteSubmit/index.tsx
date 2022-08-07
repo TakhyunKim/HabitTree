@@ -5,10 +5,10 @@ import { HabitPlusSubmitButton } from '@components';
 
 import { NavigationProp } from '@types';
 
-const DayHabitSubmit = () => {
+const HabitCompleteSubmit = () => {
   const navigation = useNavigation<NavigationProp>();
 
-  const handleSubmitButtonClick = () => {
+  const handleSubmitButtonPress = () => {
     const popAction = StackActions.pop();
 
     navigation.dispatch(popAction);
@@ -16,10 +16,10 @@ const DayHabitSubmit = () => {
 
   return (
     <HabitPlusSubmitButton
-      buttonTitle="목표 시작하기"
-      onPress={handleSubmitButtonClick}
+      buttonTitle="목표 완료하기"
+      onPress={handleSubmitButtonPress}
     />
   );
 };
 
-export default DayHabitSubmit;
+export default HabitCompleteSubmit;

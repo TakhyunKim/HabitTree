@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, RefObject } from 'react';
 import {
   NativeScrollEvent,
   NativeSyntheticEvent,
   ScrollView,
 } from 'react-native';
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import { startOfWeek } from 'date-fns';
 
 import { habitDay } from '@recoil/atoms';
@@ -26,7 +25,7 @@ export const useScrollWeeks = (
   const [renderDate, setRenderDate] = useState<Date>(new Date());
   const [weekList, setWeekList] = useState<Date[][]>(getThreeWeeks(new Date()));
 
-  const [_, setHabitTargetDate] = useRecoilState(habitDay);
+  const setHabitTargetDate = useSetRecoilState(habitDay);
 
   const scrollToMiddleCalendar = () => {
     scrollRef.current?.scrollTo({

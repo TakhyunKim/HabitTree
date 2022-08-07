@@ -18,9 +18,7 @@ export const useScrollWeeks = (
 ) => {
   const [viewPage, setViewPage] = useState<number>();
   const [renderDate, setRenderDate] = useState<Date>(new Date());
-  const [weekList, setWeekList] = useState<Date[][]>(() =>
-    getThreeWeeks(new Date()),
-  );
+  const [weekList, setWeekList] = useState<Date[][]>(getThreeWeeks(new Date()));
 
   const scrollToMiddleCalendar = (): void => {
     scrollRef.current?.scrollTo({

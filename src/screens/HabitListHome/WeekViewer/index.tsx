@@ -2,16 +2,15 @@ import React, { useRef } from 'react';
 import { View, Dimensions, ScrollView } from 'react-native';
 import { useRecoilState } from 'recoil';
 
-import DayViewer from './DayViewer';
-import YearAndMonth from './YearAndMonth';
-
 import { habitDay } from '@recoil/atoms';
 
 import { isSameDate } from '@utils';
 import { DAY_OF_THE_WEEK_LIST } from '@constants/day';
 
-import { styles } from './WeekViewer.styles';
+import DayViewer from './DayViewer';
+import YearAndMonth from './YearAndMonth';
 
+import { styles } from './WeekViewer.styles';
 import { useScrollWeeks } from './WeekViewer.hook';
 
 const { width: layoutWidth } = Dimensions.get('window');
@@ -36,7 +35,7 @@ const WeekViewer = () => {
         horizontal
         pagingEnabled
         decelerationRate="fast"
-        scrollEventThrottle={200}
+        scrollEventThrottle={20}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={style.weekViewerScrollWrapper}
         onScrollEndDrag={changeWeekViewer}>

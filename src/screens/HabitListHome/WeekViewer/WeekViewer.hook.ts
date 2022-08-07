@@ -1,9 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, RefObject } from 'react';
 import {
   NativeScrollEvent,
   NativeSyntheticEvent,
   ScrollView,
 } from 'react-native';
+import { useRecoilState } from 'recoil';
+import { startOfWeek } from 'date-fns';
+
+import { habitDay } from '@recoil/atoms';
+import { isSameDate } from '@utils';
 
 import { getThreeWeeks } from './WeekViewer.utils';
 import {
@@ -20,11 +26,23 @@ export const useScrollWeeks = (
   const [renderDate, setRenderDate] = useState<Date>(new Date());
   const [weekList, setWeekList] = useState<Date[][]>(getThreeWeeks(new Date()));
 
-  const scrollToMiddleCalendar = (): void => {
+  const [_, setHabitTargetDate] = useRecoilState(habitDay);
+
+  const scrollToMiddleCalendar = () => {
     scrollRef.current?.scrollTo({
       x: Math.floor(layoutWidth),
       animated: false,
     });
+  };
+
+  const setInitialTargetDate = (currentWeek: Date[], date: Date) => {
+    const monday = startOfWeek(date, { weekStartsOn: 1 });
+
+    const sameDateListLength = currentWeek.filter(targetDate =>
+      isSameDate(targetDate, new Date()),
+    ).length;
+
+    setHabitTargetDate(sameDateListLength === 1 ? new Date() : monday);
   };
 
   const changeWeekViewer = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
@@ -34,19 +52,18 @@ export const useScrollWeeks = (
 
     if (nextCurrent >= NEXT_PAGINATION_STANDARD) {
       copiedDate.setDate(copiedDate.getDate() + DATE_CHANGE_VALUE);
-      const currentThreeWeeks = getThreeWeeks(copiedDate);
-
-      setRenderDate(copiedDate);
-      setWeekList(currentThreeWeeks);
     } else if (nextCurrent <= PREV_PAGINATION_STANDARD) {
       copiedDate.setDate(copiedDate.getDate() - DATE_CHANGE_VALUE);
-      const currentThreeWeeks = getThreeWeeks(copiedDate);
-
-      setRenderDate(copiedDate);
-      setWeekList(currentThreeWeeks);
     }
 
+    const currentThreeWeeks = getThreeWeeks(copiedDate);
+    const currentWeek = currentThreeWeeks[1];
+
     scrollToMiddleCalendar();
+    setInitialTargetDate(currentWeek, copiedDate);
+
+    setRenderDate(copiedDate);
+    setWeekList(currentThreeWeeks);
     setViewPage(event.nativeEvent.contentOffset.x);
   };
 

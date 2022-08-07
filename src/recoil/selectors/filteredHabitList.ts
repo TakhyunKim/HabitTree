@@ -2,7 +2,14 @@ import { selector } from 'recoil';
 
 import { habitDay } from '../atoms';
 
-import { habitList as mockHabitList } from '../../mocks/habitList';
+import {
+  habitList as mockHabitList,
+  mockHabitItemList,
+} from '../../mocks/habitList';
+
+function getRandomInt(max: number) {
+  return Math.floor(Math.random() * max);
+}
 
 export const filteredHabitListState = selector({
   key: 'filteredHabitListState',
@@ -10,7 +17,8 @@ export const filteredHabitListState = selector({
     const today = get(habitDay);
     const date = today.getDate();
 
-    const filteredHabitList = mockHabitList[date];
+    const filteredHabitList =
+      mockHabitList[date] ?? mockHabitItemList[getRandomInt(6)];
 
     return filteredHabitList;
   },
